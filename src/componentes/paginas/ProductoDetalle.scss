@@ -1,0 +1,57 @@
+.tarjetaProductoDetalle{
+    display: flex;
+    margin-top: 8vw;
+    margin-bottom: 5vw;
+}
+
+.tarjetaProductoDetalleImgContainer{
+    margin-right: 10vw;
+    border: 0.2vw solid #928f8f;
+    img{
+        height: 50vw;
+    }
+}
+
+.tarjetaProductoDetalleInfo{
+    margin-top: 5vw;
+    width: 25vw;
+
+    .tarjetaProductoDetalleInfoIva{
+        margin-top: 2vw;
+        font-size: 1.2vw;
+        color: #928f8f;
+        margin-bottom: 2vw;
+    }
+}
+
+.tarjetaProductoDetalleContadorCarritoContainer{
+    display: flex;
+}
+
+.tarjetaProductoDetalleAgregarAlCarrito{
+    height: 3vw;
+}
+
+.tarjetaProductoDetalleContador{
+    display: flex;
+    border: 0.2vw solid #009BE7;
+    border-radius: 2vw;
+    justify-content: center;
+    height: 3vw;
+    width: 12vw;
+    right: 2vw;
+    top: 2.5vw;
+    margin-right: 1vw;
+    h3{
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+}
+
+.tarjetaProductoDetalleDescripcion{
+        width: 85vw;
+    
+    h3{
+        font-size: 2vw;
+    }
+}

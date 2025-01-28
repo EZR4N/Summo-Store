@@ -1,0 +1,69 @@
+.listadoProductosTarjetaContainer{
+    position: relative;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    display: flex;
+    width: 62vw;
+    box-shadow: 0.5vw 0.3vw #CACACA;
+    border-radius: 1vw;
+    border:0.001vw solid rgb(201, 197, 197);
+    padding: 1vw;
+}
+
+.listadoProductosTarjetaImgContainer{
+    width: 10vw; 
+        img{
+            width: 10vw;
+        }   
+}
+
+.listadoProductosTarjetaInfo{
+    a{
+        text-decoration: none;
+    }
+
+    h2{
+        font-size: 60%;
+        color: black;
+    }
+
+    h3{
+        font-size: 160%;
+        color: black;
+    }
+    
+    h4{
+        color: black;
+    }
+}
+
+.listadoProductosTarjetaSumarRestar{
+    display: flex;
+    border: 0.2vw solid #009BE7;
+    border-radius: 2vw;
+    justify-content: center;
+    height: 3vw;
+    width: 13vw;
+    position: absolute;
+    right: 2vw;
+    top: 2.5vw;
+
+    h3{
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    img{
+        margin-top: 0.35vw;
+        width: 2vw;
+        height: 2vw;
+    }
+}
+
+.listadoProductosTarjetaAgregarAlCarrito{
+    width: 13vw;
+    height: 4vw;
+    position: absolute;
+    right: 2vw;
+    top: 6vw;
+}

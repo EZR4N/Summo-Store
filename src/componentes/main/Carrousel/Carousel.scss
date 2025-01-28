@@ -1,0 +1,41 @@
+.mainHomeCarousel{
+    margin-top: 2vw;
+    height: 10vw;
+    width: 85vw;
+    position: relative;
+
+        .carousel-control-prev, .carousel-control-next{
+            
+            span{
+                border-radius: 1vw;
+                opacity: 100%;
+                height: 5vw;
+                width: 5vw;
+                background-color: black ;
+            }
+        }
+
+        .carousel-control-prev{
+            justify-content: start;
+            margin-left: 1vw;
+        }
+
+        .carousel-control-next{
+            justify-content: end;
+            margin-right: 1vw;
+        }
+
+        .carousel-indicators{
+            height: 3vw;
+            margin-bottom: 0.2vw;
+            button{
+                width: 2vw !important;
+                
+            }
+        }
+        img{
+            border-radius: 3vw;
+            width: 100%;
+            height: 100%;
+        }
+}

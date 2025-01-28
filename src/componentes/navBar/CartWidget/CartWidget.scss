@@ -1,0 +1,35 @@
+.logoCarrito{
+    width: 5vw;
+}
+
+.headerDivCarrito{
+    background-color: #F88A1B;
+    border-radius: 20px;
+    height: 3vw;
+    width: 15vw;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+        img{
+            height: 1.2vw;
+            margin-left: 1vw;
+        }
+
+        ul{
+            margin-top: 0.4vw;
+            margin-bottom: 0px;
+            margin-left: 0.3vw;
+            padding-left: 0px;
+            display: flex;
+            flex-direction: column;
+            height: 3vw;
+            li{
+                height: 1vw;
+                margin-top: 0.1vw;
+                margin-bottom: 0.1vw;
+            }
+        }
+}

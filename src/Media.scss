@@ -1,0 +1,135 @@
+
+
+
+@media screen and (max-width: 1024px) {
+
+//Main Container Productos Ofertas
+    .mainContainerProductosOfertas{
+        .carousel-control-prev{
+            span{
+                height: 5vw;
+            }
+        }
+
+        .carousel-control-next{
+            
+            span{
+                height: 5vw;
+            }
+        }
+    }
+
+// Main Container Productos Lanzamientos
+
+    .mainContainerProductosLanzamientos{
+        .carousel-control-prev{
+            span{
+                height: 5vw;
+            }
+        }
+
+        .carousel-control-next{
+            
+            span{
+                height: 5vw;
+            }
+        }
+    }
+
+// Main Container Productos Mas Vendidos
+.mainContainerProductosMasVendidos{
+    .carousel-control-prev{
+        span{
+            height: 5vw;
+        }
+    }
+
+    .carousel-control-next{
+        
+        span{
+            height: 5vw;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 768px) {
+
+// Carousel Home
+    .mainHomeCarousel{
+        .carousel-indicators{
+            display: none;
+        }
+    }
+
+//Main Container Productos Ofertas
+
+    .mainContainerProductosOfertas{
+    .carousel-control-next{
+        right:  -6vw !important;
+    }
+}
+
+// Main Container Productos Lanzamientos
+
+.mainContainerProductosLanzamientos{
+    .carousel-control-next{
+        right:  -6vw !important;
+    }
+}
+
+// Main Container Productos Mas Vendidos
+    .mainContainerProductosMasVendidos{
+    .carousel-control-next{
+        right:  -6vw !important;
+    }
+}
+
+
+//FOOTER
+
+.footerLinks1{
+    
+    ul{
+        width: 180%;
+        margin-right: 5vw;
+        li{
+        width: 100%; 
+        }
+    }
+
+}
+}
+
+@media screen and (max-width: 480px) {
+
+//Main Container Productos Ofertas
+
+    .mainContainerProductosOfertas{
+    .carousel-control-next{
+        right:  -7.5vw !important;
+    }
+}
+
+// Main Container Productos Lanzamientos
+
+    .mainContainerProductosLanzamientos{
+    .carousel-control-next{
+        right:  -7.5vw !important;
+    }
+}
+
+// Main Container Productos Mas Vendidos
+    .mainContainerProductosMasVendidos{
+    .carousel-control-next{
+        right:  -7.5vw !important;
+    }
+}
+
+//FOOTER
+
+// .footerLinks1Ul{
+//     li{
+
+//     }
+    }

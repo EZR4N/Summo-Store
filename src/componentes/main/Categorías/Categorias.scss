@@ -1,0 +1,45 @@
+.mainCategoriasTitulo{
+    margin-top: 3vw;
+    width: 25vw;
+    height: 3vw;
+    padding-bottom: 3.5vw;
+    border-bottom: 0.3vw solid #009BE7;
+        h2{
+            text-align: center;
+            font-size: 2vw;
+
+        }
+
+}
+
+.mainCategoriasDivTarjetas{
+    width: 85vw;
+    margin-top: 2vw;
+    display: flex;
+    justify-content: space-around;
+        img{
+            width: 12vw;
+            cursor: pointer;
+        }
+}
+
+.mainCategoriasVerTodas{
+    color: #009BE7;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 2vw;
+        h3{
+            font-size: 1.5vw;
+            margin-bottom: 0vw;
+            cursor: pointer;
+        }
+        img{
+            display: inline;
+            margin-left: 0.5vw;
+            width: 1vw;
+            height: 1.5vw;
+            cursor: pointer;
+        }
+}

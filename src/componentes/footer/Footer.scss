@@ -1,0 +1,136 @@
+footer{
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.footerContainer{
+    position: relative;
+    width: 2000%;
+    height: 20vw;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerBotonVolverAlPrincipio{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 2vw;
+    z-index: 1;
+    width: 100%;
+    background-color: #009BE7;
+        img{
+            cursor: pointer;
+            height: 1vw;
+            margin-right: 0.5vw;
+        }
+
+        h3{
+            cursor: pointer;
+            font-size: 1.2vw;
+            width: 10vw;
+            margin-bottom: 0vw;
+            color: white;
+        }
+}
+
+.footerLogoContainer{
+    margin-left: 10vw;
+    img{
+        width: 15vw;
+    }
+}
+
+
+.footerLinks1Ul{
+    display: flex;
+    flex-direction: column;
+    height: 10vw;
+    align-items: start;
+    li{
+        font-size: 1vw;
+        color: #555555;
+    }
+}
+
+.footerLinks1, .footerLinks2, .footerRedesSociales, .footerLogoContainer{
+    height: 10vw;
+}
+
+.footerLinks2Ul{
+    display: flex;
+    flex-direction: column;
+    height: 10vw;
+    align-items: start;
+    li{
+        color: #555555;
+        position: relative;
+        div{
+            display: flex;
+            height: 1.5vw;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1.2vw;
+                p{
+                    height: 1vw;
+                    margin-bottom: 0vw;
+                }
+
+                img{
+                    position: absolute;
+                    left: 0vw;
+                    top: 0.5vw;
+                    height: 1vw;
+                    width: 1vw;
+                }
+        }
+    }
+
+
+}
+
+.footerRedesSociales{
+    
+    margin-right: 10vw;
+        ul{
+            display: flex;
+            flex-direction: column;
+                .footerRedesSocialesIconosContainer{
+                    display: flex;
+                    width: 8vw;
+                    justify-content: space-evenly;
+                }
+                
+                img{
+                    height: 2vw;
+                }
+        }
+}
+
+.footerCopyright{
+   
+    position: absolute;
+    bottom: 0vw;
+    width: 100%;
+    height: 2vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #AAAAAA;
+    h3{
+        text-align: center;
+        color: #555555;
+        font-size: 1vw;
+        margin-bottom: 0vw;
+        margin-top: 0.5vw;
+    }
+}
+
+.footerLiDecorado{
+    color: #009BE7 !important;
+}
