@@ -1,8 +1,12 @@
 import React from 'react'
+import ListadoProductos from '../ListadoProductos'
 
-const Cif = () => {
+const Cif = ({productos}) => {
+  let productosFiltrados = productos.filter(producto =>
+    producto.marca=="Cif"
+  )
   return (
-    <div>Cif</div>
+    <ListadoProductos productos={productosFiltrados} categoria="Cif"/>
   )
 }
 

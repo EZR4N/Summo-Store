@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 import MainContainerProductosOfertas from '../main/MainContainerProductosMejoresOfertas/mainContainerProductosOfertas'
-import productos from '../../asyncmock'
-const TarjetaProductoDetalle = () => {
+import { CarritoContext } from '../../context/carritoContext'
+
+const TarjetaProductoDetalle = ({productos}) => {
+    const { agregarAlCarrito } = useContext(CarritoContext)
     let {id} = useParams()
     let producto = productos.find(producto => producto.id == id)
     const [contador, setContador] = useState(0)
-
     let incrementar = () =>{
         contador < producto.stock && setContador(contador+1)
     }
@@ -15,6 +16,12 @@ const TarjetaProductoDetalle = () => {
     let decrementar = () =>{
         contador > 0 && setContador(contador-1)
     }
+
+    let agregar = (producto, cantidad) =>{ 
+        agregarAlCarrito(producto, cantidad)
+        setContador(0)
+    }
+
     return (
         <>
     <div className='tarjetaProductoDetalle'>
@@ -34,7 +41,7 @@ const TarjetaProductoDetalle = () => {
                     <h3>{contador}</h3>
                 <img onClick={incrementar} src="\src\assets\imagenes\add.png" alt="icono agregar unidad" />
             </div>
-            <img className='tarjetaProductoDetalleAgregarAlCarrito' src="\src\assets\imagenes\agregar (2).png" alt="icono agregar carrito" />
+            <img onClick={()=>agregar(producto, contador)} className='tarjetaProductoDetalleAgregarAlCarrito' src="\src\assets\imagenes\agregar (2).png" alt="icono agregar carrito" />
             </div>
         </div>
     </div>

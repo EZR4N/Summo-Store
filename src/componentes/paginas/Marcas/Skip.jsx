@@ -1,8 +1,12 @@
 import React from 'react'
+import ListadoProductos from '../ListadoProductos'
 
-const Skip = () => {
+const Skip = ({productos}) => {
+  let productosFiltrados = productos.filter(producto =>
+    producto.marca=="Skip"
+  )
   return (
-    <div>Skip</div>
+    <ListadoProductos productos={productosFiltrados} categoria="Skip"/>
   )
 }
 

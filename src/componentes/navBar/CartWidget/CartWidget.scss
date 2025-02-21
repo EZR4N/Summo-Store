@@ -26,6 +26,10 @@
             display: flex;
             flex-direction: column;
             height: 3vw;
+            a{
+                height: 1vw;
+                color: black;
+            }
             li{
                 height: 1vw;
                 margin-top: 0.1vw;

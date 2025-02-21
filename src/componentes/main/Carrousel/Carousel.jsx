@@ -12,7 +12,7 @@ const CarouselMain = () => {
         </Carousel.Item>
 
         <Carousel.Item>
-            <img src="\src\assets\imagenes\image 9.png" alt="" />
+            <img src="\src\assets\imagenes\bannerUnilever.png" alt="" />
         
         </Carousel.Item>
       </Carousel> 

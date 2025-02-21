@@ -4,8 +4,15 @@ import ListadoProductos from '../ListadoProductos'
 
 
 const AderezosYCondimentos = ({productos}) => {
+
+  let productosFiltrados = productos.filter(producto =>
+    producto.categoria ==="aderezosyCondimentos"  
+  )
+
   return (
-    <div>AderezosYCondimentos</div>
+  <>
+    <ListadoProductos productos={productosFiltrados} categoria="Aderezos"/>
+  </>
   )
 }
 

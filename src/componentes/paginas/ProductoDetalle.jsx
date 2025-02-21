@@ -3,10 +3,10 @@ import TarjetaProducto from '../main/TarjetaProducto/TarjetaProducto'
 import TarjetaProductoDetalle from './tarjetaProductoDetalle'
 import './ProductoDetalle.scss'
 
-const ProductoDetalle = () => {
+const ProductoDetalle = ({productos}) => {
   return (
     <>
-        <TarjetaProductoDetalle/>
+        <TarjetaProductoDetalle productos={productos}/>
     </>
   )
 }

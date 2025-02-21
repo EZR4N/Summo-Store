@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Lux = () => {
+import ListadoProductos from '../ListadoProductos'
+
+const Lux = ({productos}) => {
+  let productosFiltrados = productos.filter(producto =>
+    producto.marca=="Lux"
+  )
   return (
-    <div>Lux</div>
+    <ListadoProductos productos={productosFiltrados} categoria="Lux"/>
   )
 }
 

@@ -21,7 +21,7 @@ const Home = ({productos}) => {
       <Categorias/>
       <ContainerAyudaApp/>     
       <MainContainerProductosOfertas productos={productos}/>
-      <MainContainerProductosLanzamientos productos={productos}/>
+      <MainContainerProductosLanzamientos />
       <MainContainerBanner/>
       <MainContainerProductosMasVendidos productos={productos}/>
       

@@ -1,6 +1,10 @@
-import { useState } from 'react'
+
 import "./Media.scss"
 import './App.scss'
+import {  CarritoProvider } from './context/carritoContext';
+import { db } from './services/config';
+import { collection, addDoc, getDocs, query  } from 'firebase/firestore';
+import { useState, useEffect } from 'react'
 
 
 // Páginas
@@ -27,14 +31,29 @@ import Sedal from './componentes/paginas/Marcas/Sedal'
 import Skip from './componentes/paginas/Marcas/Skip'
 
 import Home from './componentes/home/Home';
-import productos from './asyncmock';
 import Footer from './componentes/footer/Footer';
 import NavBar from './componentes/navBar/NavBar';
 import ProductoDetalle from './componentes/paginas/ProductoDetalle';
+import Cart from './componentes/Cart/Cart';
+import Checkout from './componentes/Checkout/Checkout';
 
 
 function App() {
-  
+
+    const  [productos, setProductos] = useState ([])
+    
+        useEffect( () =>{
+          const misProductos = query(collection(db, 'productos'))
+          getDocs(misProductos)
+            .then(res=>{
+              const nuevosProductos = res.docs.map(doc =>{
+                const data = doc.data()
+                return {id: doc.id, ...data}
+              })
+              setProductos(nuevosProductos)
+            })
+            .catch((error) => console.error("error al recibir los productos", error))
+        },[])
   
   return (
     <>
@@ -42,6 +61,7 @@ function App() {
     
 
     <BrowserRouter>
+    <CarritoProvider>
     <header>
     <NavBar/>
     </header>
@@ -69,13 +89,17 @@ function App() {
           <Route path='/marcas/Sedal' element={<Sedal productos={productos}/>}/>
           <Route path='/marcas/Skip' element={<Skip productos={productos}/>}/>
           
+          // Cart
+
+          <Route path='/carrito' element={<Cart/>}/>
+          <Route path="/checkout" element={<Checkout/>}/>
         </Routes>
 
     </main>
         <footer>
         <Footer/>
         </footer>
-      
+        </CarritoProvider>
       </BrowserRouter>
     </>
   )

@@ -1,18 +1,25 @@
 import React from 'react'
 import { useState } from 'react'
-
-import {Link, useLocation} from "react-router-dom"
+import { useContext } from 'react'
+import {Link} from "react-router-dom"
 import "./TarjetaProducto2.scss"
-const TarjetaProducto2 = ({idProducto, imagenProducto, producto, descripcion, marca, precio, stock, descuento, lanzamiento}) => {
+import { CarritoContext } from '../../context/carritoContext'
+const TarjetaProducto2 = ({producto}) => {
     const [contadorTarjeta, setContadorTarjeta] = useState(0)
-
+          
+          const {agregarAlCarrito} = useContext(CarritoContext)
 
           const incrementar = () =>{
-            contadorTarjeta < stock && setContadorTarjeta(contadorTarjeta+1) 
+            contadorTarjeta < producto.stock && setContadorTarjeta(contadorTarjeta+1) 
           }
     
           const decrementar = () =>{
             contadorTarjeta != 0 && setContadorTarjeta(contadorTarjeta-1)
+          }
+
+          const agregar= (producto, cantidad) =>{
+            agregarAlCarrito(producto, cantidad)
+            setContadorTarjeta(0)
           }
   return (
     <>
@@ -25,29 +32,28 @@ const TarjetaProducto2 = ({idProducto, imagenProducto, producto, descripcion, ma
             </div>
             
             <div className='listadoProductosTarjetaImgContainer'>
-            <Link to={`/item/${idProducto}`}>
-              <img className='listadoProductosTarjeteaImg' src={imagenProducto} alt={"imagen "+ producto} />
+            <Link to={`/item/${producto.id}`}>
+              <img className='listadoProductosTarjeteaImg' src={producto.img} alt={"imagen "+ producto.nombre} />
               </Link>
               </div>
 
               <div className="listadoProductosTarjetaInfo">
-              <Link to={`/item/${idProducto}`}>
-              <h4>{producto}</h4>
+              <Link to={`/item/${producto.id}`}>
+              <h4>{producto.nombre}</h4>
               </Link>
-              <Link to={`/item/${idProducto}`}>
-              <h3>{marca}</h3>
+              <Link to={`/item/${producto.id}`}>
+              <h3>{producto.marca}</h3>
               </Link>
-              <Link to={`/item/${idProducto}`}>
-              <h3>{"$"+precio+" /uni"}</h3>
+              <Link to={`/item/${producto.id}`}>
+              <h3>{"$"+producto.precio+" /uni"}</h3>
               </Link>
               </div>
             <div className="listadoProductosTarjetaSumarRestar">
                 <img onClick={decrementar} src="\src\assets\imagenes\remove.png" alt="icono restar unidad" />
                     <h3> {contadorTarjeta}</h3>
-                    {/* <h3>{cantidad}</h3> */}
                 <img onClick={incrementar} src="\src\assets\imagenes\add.png" alt="icono agregar unidad" />
             </div>
-            <img className='listadoProductosTarjetaAgregarAlCarrito' src="\src\assets\imagenes\agregar (2).png" alt="icono agregar carrito" />
+            <img onClick={(e) => agregar(producto, contadorTarjeta)} className='listadoProductosTarjetaAgregarAlCarrito' src="\src\assets\imagenes\agregar (2).png" alt="icono agregar carrito" />
 
 
      </div>

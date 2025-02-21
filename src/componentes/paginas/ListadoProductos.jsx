@@ -19,7 +19,7 @@ const ListadoProductos = ({productos, categoria}) => {
             <h3>{productos.length} productos encontrados </h3>
       </div>
       {productos.map((producto) => (
-          <TarjetaProducto2 key={producto.id} className="tarjetaListadoProductos" idProducto={producto.id} imagenProducto={producto.img} producto={producto.nombre} marca={producto.marca} precio={producto.precio} stock={producto.stock}/> 
+          <TarjetaProducto2 key={producto.id} className="tarjetaListadoProductos" producto={producto}/> 
         )
         )}
         </div>

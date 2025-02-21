@@ -12,46 +12,31 @@ const NuestrosProductos = () => {
 
     </div>
         <div className='mainDivNuestrosProductosTarjetas'>
-            <Link to="/marcas/knorr">
-            <NuestrosProductosTarjeta  img="\src\assets\imagenes\Knorr.png" clase="mainNuestrosProductosTarjetaKnorr"/>
-            </Link>
+            <NuestrosProductosTarjeta ruta="/marcas/knorr"  img="\src\assets\imagenes\Knorr.png" clase="mainNuestrosProductosTarjetaKnorr"/>
+            
 
-            <Link to="/marcas/axe">
-            <NuestrosProductosTarjeta  img="\src\assets\imagenes\Axe.png" clase="mainNuestrosProductosTarjetaAxe"/>
-            </Link>
 
-            <Link to="/marcas/Cif">
-            <NuestrosProductosTarjeta  img="\src\assets\imagenes\Cif.png" clase="mainNuestrosProductosTarjetaCif"/>
-            </Link>
-            
-            <Link to="/marcas/Dove">
-            <NuestrosProductosTarjeta  img="\src\assets\imagenes\Dove.png" clase="mainNuestrosProductosTarjetaDove"/>
-            </Link>
-            
-            <Link to="/marcas/hellmanns">
-            <NuestrosProductosTarjeta  img="\src\assets\imagenes\Hellmans.png" clase="mainNuestrosProductosTarjetaHellmanns"/>
-            </Link>
+            <NuestrosProductosTarjeta ruta="/marcas/axe" img="\src\assets\imagenes\Axe.png" clase="mainNuestrosProductosTarjetaAxe"/>
 
-            <Link to="/marcas/Lux">
-            <NuestrosProductosTarjeta  img="\src\assets\imagenes\Lux.png" clase="mainNuestrosProductosTarjetaLux"/>
-            </Link>
+            <NuestrosProductosTarjeta ruta="/marcas/Cif"  img="\src\assets\imagenes\Cif.png" clase="mainNuestrosProductosTarjetaCif"/>
+                    
+            <NuestrosProductosTarjeta ruta="/marcas/dove" img="\src\assets\imagenes\Dove.png" clase="mainNuestrosProductosTarjetaDove"/>
+
+            <NuestrosProductosTarjeta ruta="/marcas/hellmanns" img="\src\assets\imagenes\Hellmans.png" clase="mainNuestrosProductosTarjetaHellmanns"/>
             
-            <Link to="/marcas/rexona">
-            <NuestrosProductosTarjeta  img="\src\assets\imagenes\Rexona.png" clase="mainNuestrosProductosTarjetaRexona"/>
-            </Link>
+            <NuestrosProductosTarjeta ruta="/marcas/lux"  img="\src\assets\imagenes\Lux.png" clase="mainNuestrosProductosTarjetaLux"/>
             
-            <Link to="/marcas/Sedal">
-            <NuestrosProductosTarjeta  img="\src\assets\imagenes\Sedal.png" clase="mainNuestrosProductosTarjetaSedal"/>
-            </Link>
+            <NuestrosProductosTarjeta ruta="/marcas/rexona" img="\src\assets\imagenes\Rexona.png" clase="mainNuestrosProductosTarjetaRexona"/>
             
-            <Link to="/marcas/Skip">
-            <NuestrosProductosTarjeta  img="\src\assets\imagenes\Skip.png" clase="mainNuestrosProductosTarjetaSkip"/>
-            </Link>
+            <NuestrosProductosTarjeta ruta="/marcas/sedal" img="\src\assets\imagenes\Sedal.png" clase="mainNuestrosProductosTarjetaSedal"/>
+            
+            <NuestrosProductosTarjeta ruta="/marcas/skip" img="\src\assets\imagenes\Skip.png" clase="mainNuestrosProductosTarjetaSkip"/>
+            
         </div>
 
         <div className='mainDivNuestrosProductosVerTodas'>
             <h3>Ver todos los productos</h3>
-            <img src="\public\imagenes\chevron-forward-sharp.png" alt="" />
+            <img src="/src/assets/imagenes/chevron-forward-sharp.png" alt="" />
         </div>
     </>
   )
