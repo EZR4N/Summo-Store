@@ -9,7 +9,7 @@ import MainContainerBanner from '../main/MainContainerBanner/MainContainerBanner
 import MainContainerProductosMasVendidos from '../main/MainContainerProductosMasVendidos/MainContainerProductosMasVendidos'
 import NavBar from '../navBar/NavBar'
 import Footer from '../footer/Footer'
-import MainContainerProductosOfertas from '../main/MainContainerProductosMejoresOfertas/mainContainerProductosOfertas'
+import MainContainerProductosOfertas from '../main/MainContainerProductosMejoresOfertas/MainContainerProductosOfertas'
 const Home = ({productos}) => {
   return (
     <>
