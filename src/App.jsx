@@ -1,7 +1,7 @@
 
 import "./Media.scss"
 import './App.scss'
-import {  CarritoProvider } from './context/carritoContext';
+import {  CarritoProvider } from './context/CarritoContext';
 import { db } from './services/config';
 import { collection, addDoc, getDocs, query  } from 'firebase/firestore';
 import { useState, useEffect } from 'react'
