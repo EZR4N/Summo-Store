@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link, NavLink} from 'react-router-dom'
 import './CartWidget.scss'
-import { CarritoContext } from '../../../context/carritoContext'
+import { CarritoContext } from '../../../context/CarritoContext'
 
 const CartWidget = () => {
   const {cantidadTotal, total} = useContext(CarritoContext)
