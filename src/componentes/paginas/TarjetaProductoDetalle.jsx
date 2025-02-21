@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
-import MainContainerProductosOfertas from '../main/MainContainerProductosMejoresOfertas/mainContainerProductosOfertas'
+import MainContainerProductosOfertas from '../main/MainContainerProductosMejoresOfertas/MainContainerProductosOfertas'
 import { CarritoContext } from '../../context/carritoContext'
 
 const TarjetaProductoDetalle = ({productos}) => {
