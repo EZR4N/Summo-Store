@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 import MainContainerProductosOfertas from '../main/MainContainerProductosMejoresOfertas/MainContainerProductosOfertas'
-import { CarritoContext } from '../../context/carritoContext'
+import { CarritoContext } from '../../context/CarritoContext'
 
 const TarjetaProductoDetalle = ({productos}) => {
     const { agregarAlCarrito } = useContext(CarritoContext)
