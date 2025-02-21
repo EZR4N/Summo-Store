@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useState, useEffect } from 'react'
 import { db } from '../../services/config'
-import { CarritoContext } from '../../context/carritoContext'
+import { CarritoContext } from '../../context/CarritoContext'
 import { collection, addDoc} from "firebase/firestore"
 
 const Checkout = () => {
