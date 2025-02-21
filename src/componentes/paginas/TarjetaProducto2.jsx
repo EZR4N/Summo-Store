@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useContext } from 'react'
 import {Link} from "react-router-dom"
 import "./TarjetaProducto2.scss"
-import { CarritoContext } from '../../context/carritoContext'
+import { CarritoContext } from '../../context/CarritoContext'
 const TarjetaProducto2 = ({producto}) => {
     const [contadorTarjeta, setContadorTarjeta] = useState(0)
           
