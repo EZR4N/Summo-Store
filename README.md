@@ -47,5 +47,8 @@ ESLint + Prettier
 GitHub Actions (CI/CD)
 React Testing Library (Pruebas)
 
+### Link
+https://pre-entrega-2-orellana-react.vercel.app/
+
 ## Licencia 
 Distribuido bajo la licencia MIT. Ver el archivo LICENSE para más información.
