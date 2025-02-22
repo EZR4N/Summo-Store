@@ -27,7 +27,7 @@ const TarjetaProducto2 = ({producto}) => {
         
             <div className="listadoProductosTarjetaFavContainer">
             
-                <img src="\src\assets\imagenes\fav.png" alt="icono favorito" />
+                <img src="/assets/imagenes/fav.png" alt="icono favorito" />
             
             </div>
             
@@ -49,11 +49,11 @@ const TarjetaProducto2 = ({producto}) => {
               </Link>
               </div>
             <div className="listadoProductosTarjetaSumarRestar">
-                <img onClick={decrementar} src="\src\assets\imagenes\remove.png" alt="icono restar unidad" />
+                <img onClick={decrementar} src="/assets/imagenes/remove.png" alt="icono restar unidad" />
                     <h3> {contadorTarjeta}</h3>
-                <img onClick={incrementar} src="\src\assets\imagenes\add.png" alt="icono agregar unidad" />
+                <img onClick={incrementar} src="/assets/imagenes/add.png" alt="icono agregar unidad" />
             </div>
-            <img onClick={(e) => agregar(producto, contadorTarjeta)} className='listadoProductosTarjetaAgregarAlCarrito' src="\src\assets\imagenes\agregar (2).png" alt="icono agregar carrito" />
+            <img onClick={(e) => agregar(producto, contadorTarjeta)} className='listadoProductosTarjetaAgregarAlCarrito' src="/assets/imagenes/agregar (2).png" alt="icono agregar carrito" />
 
 
      </div>

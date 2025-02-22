@@ -24,7 +24,7 @@ const TarjetaProducto = ({producto}) => {
     
             <div className="mainContainerCarta">
               <div className="mainContainerCartaFav">
-                <img src="\src\assets\imagenes\fav.png" alt="icono favorito" />
+                <img src="/assets/imagenes/fav.png" alt="icono favorito" />
               </div>
               <Link to={`/item/${producto.id}`}>
               <img className='mainContainerCartaImagen' src={producto.img} alt={"imagen "+ producto.nombre} />
@@ -35,11 +35,11 @@ const TarjetaProducto = ({producto}) => {
               <h3>{"$"+producto.precio+" /uni"}</h3>
               </Link>
             <div className="mainContainerCartaSumarRestar">
-                <img onClick={decrementar} src="\src\assets\imagenes\remove.png" alt="icono restar unidad" />
+                <img onClick={decrementar} src="/assets/imagenes/remove.png" alt="icono restar unidad" />
                     <h3> {contadorTarjeta}</h3>
-                <img onClick={incrementar} src="\src\assets\imagenes\add.png" alt="icono agregar unidad" />
+                <img onClick={incrementar} src="/assets/imagenes/add.png" alt="icono agregar unidad" />
             </div>
-            <img onClick={()=> agregar(producto,contadorTarjeta)} className='mainContainerCartaAgregarAlCarrito' src="\src\assets\imagenes\agregar (2).png" alt="icono agregar carrito" />
+            <img onClick={()=> agregar(producto,contadorTarjeta)} className='mainContainerCartaAgregarAlCarrito' src="/assets/imagenes/agregar (2).png" alt="icono agregar carrito" />
             </div>
           
     

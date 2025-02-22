@@ -14,10 +14,10 @@ const NavBar = () => {
     <header>
         <nav className="headerNav1">
             <Link to={"/"}>
-                <img src="\src\assets\imagenes\Screenshot_10.png" className="headerLogo" alt="Summo Store Logo" />
+                <img src="/assets/imagenes/Screenshot_10.png" className="headerLogo" alt="Summo Store Logo" />
             </Link>
             <div className="headerDivInput">
-                <img src="\src\assets\imagenes\searchIcon.png" alt="icono búsqueda" />
+                <img src="/assets/imagenes/searchIcon.png" alt="icono búsqueda" />
                 <input type="text" placeholder="Buscar" className="headerInput"/>
             </div>
             <UsuarioNavBar/>

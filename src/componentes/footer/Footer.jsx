@@ -13,13 +13,13 @@ const Footer = () => {
   return (
     <>
     <div onClick={volverAlPrincipio} className='footerBotonVolverAlPrincipio'>
-            <img src="\src\assets\imagenes\arrow-up.png" alt="icono flecha volver" />
+            <img src="/assets/imagenes/arrow-up.png" alt="icono flecha volver" />
             <h3>Ir al principio</h3>
     </div>
       <div className='footerContainer'>
         <div className='footerLogoContainer'>
             <Link to={"/"}>
-                <img className='footerLogo' src="\src\assets\imagenes\Screenshot_10.png" alt="Summo logo" />
+                <img className='footerLogo' src="/assets/imagenes/Screenshot_10.png" alt="Summo logo" />
             </Link>
         </div>
         <div className='footerLinks1'>
@@ -38,19 +38,19 @@ const Footer = () => {
                 <li className='footerLiDecorado'>Contáctanos</li>
                 <li>
                     <div className='footerLinks2Container'>
-                        <img className='footerLinks2Icono' src="\src\assets\imagenes\call-outline.png" alt="icono de telefono" />
+                        <img className='footerLinks2Icono' src="/assets/imagenes/call-outline.png" alt="icono de telefono" />
                         <p>+54 11 xxxx-xxxx</p>
                     </div>
                 </li>
                 <li>
                     <div className='footerLinks2Container'>
-                        <img className='footerLinks2Icono' src="\src\assets\imagenes\call-outline.png" alt="icono de telefono" />
+                        <img className='footerLinks2Icono' src="/assets/imagenes/call-outline.png" alt="icono de telefono" />
                         <p>+54 11 xxxx-xxxx</p>
                     </div>
                 </li>
                 <li>
                     <div className='footerLinks2Container'>
-                        <img className='footerLinks2Icono' src="\src\assets\imagenes\mail-outline.png" alt="icono de email" />
+                        <img className='footerLinks2Icono' src="/assets/imagenes/mail-outline.png" alt="icono de email" />
                         <p>ezeore2@gmail.com</p>
                     </div>
                 </li>
@@ -61,9 +61,9 @@ const Footer = () => {
                 <li className='footerLiDecorado'>Redes Sociales</li>
                 <li>
                     <div className='footerRedesSocialesIconosContainer'>
-                        <img src="\src\assets\imagenes\logo-facebook.png" alt="logo facebook" />
-                        <img src="\src\assets\imagenes\logo-instagram.png" alt="logo instagram" />
-                        <img src="\src\assets\imagenes\logo-linkedin.png" alt="logo linkedin" />
+                        <img src="/assets/imagenes/logo-facebook.png" alt="logo facebook" />
+                        <img src="/assets/imagenes/logo-instagram.png" alt="logo instagram" />
+                        <img src="/assets/imagenes/logo-linkedin.png" alt="logo linkedin" />
                     </div>
                 </li>
              </ul>

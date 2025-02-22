@@ -23,7 +23,7 @@ const CartWidget = () => {
         </NavLink>
       </ul>
       <Link to="/carrito">
-      <img src="\src\assets\imagenes\add-circle-outline.png" alt="icono" />
+      <img src="/assets/imagenes/add-circle-outline.png" alt="icono" />
       </Link>
     </div>
   )

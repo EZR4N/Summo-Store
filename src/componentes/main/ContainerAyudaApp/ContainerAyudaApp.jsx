@@ -3,8 +3,8 @@ import "./ContainerAyudaApp.scss"
 const ContainerAyudaApp = () => {
   return (
     <div className='mainDivAyudaApp'>
-        <img src="\src\assets\imagenes\Ayuda.png" alt="Ayuda" />
-        <img src="\src\assets\imagenes\SummoApp.png" alt="" />
+        <img src="/assets/imagenes/Ayuda.png" alt="Ayuda" />
+        <img src="/assets/imagenes/SummoApp.png" alt="" />
     </div>
   )
 }
