@@ -4,7 +4,7 @@ const ContainerAyudaApp = () => {
   return (
     <div className='mainDivAyudaApp'>
         <img src="/assets/imagenes/Ayuda.png" alt="Ayuda" />
-        <img src="/public/assets/imagenes/SummoApp.png" alt="" />
+        <img src="/assets/imagenes/SummoApp.png" alt="" />
     </div>
   )
 }
