@@ -6,7 +6,7 @@ const Axe = ({productos}) => {
     producto.marca=="Axe"
   )
   return (
-    <ListadoProductos productos={productosFiltrados} categoria="Axe"/>
+    <ListadoProductos productos={productosFiltrados} tiulo="Axe"/>
   )
 }
 

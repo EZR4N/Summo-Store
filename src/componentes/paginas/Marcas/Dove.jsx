@@ -6,7 +6,7 @@ const Dove = ({productos}) => {
     producto.marca=="Dove"
   )
   return (
-    <ListadoProductos productos={productosFiltrados} categoria="Dove"/>
+    <ListadoProductos productos={productosFiltrados} titulo="Dove"/>
   )
 }
 

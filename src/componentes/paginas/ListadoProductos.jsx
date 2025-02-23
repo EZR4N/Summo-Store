@@ -3,7 +3,7 @@ import TarjetaProducto2 from './TarjetaProducto2'
 import './ListadoProductos.scss'
 
 
-const ListadoProductos = ({productos, categoria}) => {
+const ListadoProductos = ({productos, titulo}) => {
   
   return (
     <>
@@ -15,7 +15,7 @@ const ListadoProductos = ({productos, categoria}) => {
       
       <div className="listadoProductosProductos">
       <div className="listadoProductosTitulo">
-            <h2>{categoria}</h2>
+            <h2>{titulo}</h2>
             <h3>{productos.length} productos encontrados </h3>
       </div>
       {productos.map((producto) => (

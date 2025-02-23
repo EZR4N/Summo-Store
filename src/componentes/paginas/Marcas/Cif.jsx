@@ -6,7 +6,7 @@ const Cif = ({productos}) => {
     producto.marca=="Cif"
   )
   return (
-    <ListadoProductos productos={productosFiltrados} categoria="Cif"/>
+    <ListadoProductos productos={productosFiltrados} titulo="Cif"/>
   )
 }
 

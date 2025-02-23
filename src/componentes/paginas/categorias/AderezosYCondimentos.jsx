@@ -11,7 +11,7 @@ const AderezosYCondimentos = ({productos}) => {
 
   return (
   <>
-    <ListadoProductos productos={productosFiltrados} categoria="Aderezos"/>
+    <ListadoProductos productos={productosFiltrados} titulo="Aderezos y condimentos"/>
   </>
   )
 }

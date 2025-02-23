@@ -9,7 +9,7 @@ const HigienePersonal = ({productos}) => {
   
   return (
     <>
-    <ListadoProductos productos={productosFiltrados} categoria="Higiene personal"/>
+    <ListadoProductos productos={productosFiltrados} titulo="Higiene personal"/>
     </>
   )
 }

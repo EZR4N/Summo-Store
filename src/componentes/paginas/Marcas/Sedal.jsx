@@ -7,7 +7,7 @@ const Sedal = ({productos}) => {
     )
   return (
     <>
-      <ListadoProductos productos={productosFiltrados} categoria="Sedal"/>
+      <ListadoProductos productos={productosFiltrados} titulo="Sedal"/>
     </>
   )
 }

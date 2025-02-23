@@ -6,7 +6,7 @@ const Rexona = ({productos}) => {
     producto.marca=="Rexona"
   )
   return (
-    <ListadoProductos productos={productosFiltrados} categoria="Rexona"/>
+    <ListadoProductos productos={productosFiltrados} titulo="Rexona"/>
   )
 }
 

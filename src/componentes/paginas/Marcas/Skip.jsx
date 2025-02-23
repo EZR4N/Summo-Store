@@ -6,7 +6,7 @@ const Skip = ({productos}) => {
     producto.marca=="Skip"
   )
   return (
-    <ListadoProductos productos={productosFiltrados} categoria="Skip"/>
+    <ListadoProductos productos={productosFiltrados} titulo="Skip"/>
   )
 }
 
