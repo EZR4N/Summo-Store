@@ -36,7 +36,7 @@ import NavBar from './componentes/navBar/NavBar';
 import ProductoDetalle from './componentes/paginas/ProductoDetalle';
 import Cart from './componentes/Cart/Cart';
 import Checkout from './componentes/Checkout/Checkout';
-
+import TodosLosProductos from './componentes/paginas/TodosLosProductos'
 
 function App() {
 
@@ -93,6 +93,10 @@ function App() {
 
           <Route path='/carrito' element={<Cart/>}/>
           <Route path="/checkout" element={<Checkout/>}/>
+
+          // Listados de productos filtrados
+
+          <Route path='/productos' element={<TodosLosProductos productos={productos}/>} />
         </Routes>
 
     </main>

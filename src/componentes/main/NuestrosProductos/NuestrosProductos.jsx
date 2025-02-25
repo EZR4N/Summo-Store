@@ -35,8 +35,12 @@ const NuestrosProductos = () => {
         </div>
 
         <div className='mainDivNuestrosProductosVerTodas'>
+            <Link to="/productos">
             <h3>Ver todos los productos</h3>
+            </Link>
+            <Link to="/productos">
             <img src="/assets/imagenes/chevron-forward-sharp.png" alt="" />
+            </Link>
         </div>
     </>
   )

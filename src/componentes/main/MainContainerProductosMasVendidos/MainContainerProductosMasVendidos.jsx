@@ -7,24 +7,11 @@ import { getDocs, collection, query } from 'firebase/firestore'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-const MainContainerProductosMasVendidos = () => {
+const MainContainerProductosMasVendidos = ({productos}) => {
 
-  const  [productos, setProductos] = useState ([])
-  
-      useEffect( () =>{
-        const misProductos = query(collection(db, 'productos'))
-        getDocs(misProductos)
-          .then(res=>{
-            const nuevosProductos = res.docs.map(doc =>{
-              const data = doc.data()
-              return {id: doc.id, ...data}
-            })
-            setProductos(nuevosProductos)
-          })
-          .catch((error) => console.error("error al recibir los productos", error))
-      },[])
-
-  const settings = {
+  let productosMasVendidos = productos.sort((a, b) => a.stock - b.stock)
+  productosMasVendidos.length = 10
+    const settings = {
     className: "center",
     infinite: true,
     centerPadding: "60px",
@@ -48,7 +35,7 @@ const MainContainerProductosMasVendidos = () => {
         {/* <div>
         <TarjetaProducto className='tarjetaProductosMasVendidos' imagenProducto={productos[0].img} producto={producto[0].nombre} marca={productos[0].marca} precio={productos[0].precio} />
         </div> */}
-        {productos.map((producto) => (
+        {productosMasVendidos.map((producto) => (
           <TarjetaProducto key={producto.id} className="tarjetaProductosOfertas" producto={producto}/> 
         ))}
       </Slider>

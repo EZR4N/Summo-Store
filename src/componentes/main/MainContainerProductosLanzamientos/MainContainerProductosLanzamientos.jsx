@@ -9,22 +9,10 @@ import { getDocs, collection, query } from 'firebase/firestore'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-const MainContainerProductosLanzamientos = () => {
+const MainContainerProductosLanzamientos = ({productos}) => {
 
-  const  [productos, setProductos] = useState ([])
-
-    useEffect( () =>{
-      const misProductos = query(collection(db, 'productos'))
-      getDocs(misProductos)
-        .then(res=>{
-          const nuevosProductos = res.docs.map(doc =>{
-            const data = doc.data()
-            return {id: doc.id, ...data}
-          })
-          setProductos(nuevosProductos)
-        })
-        .catch((error) => console.error("error al recibir los productos", error))
-    },[])
+  let productosFiltrados = productos.filter(producto => producto.lanzamiento===true)
+  
 
   const settings = {
     className: "center",
@@ -47,7 +35,7 @@ const MainContainerProductosLanzamientos = () => {
     <div className='mainContainerProductosLanzamientos'>
     <div className="slider-container mainContainerProductosLanzamientosSlider">
       <Slider {...settings}>
-      {productos.map((producto) => (
+      {productosFiltrados.map((producto) => (
           <TarjetaProducto key={producto.id} className="tarjetaProductosOfertas" producto={producto}/> 
         ))}
       </Slider>

@@ -1,31 +1,12 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
-import { useState, useEffect } from 'react'
-import { db } from '../../../services/config'
-import { getDocs, collection, query } from 'firebase/firestore'
-
 import TarjetaProducto from '../TarjetaProducto/TarjetaProducto'
 import "./mainContainerProductosOfertas.scss"
 
-const MainContainerProductosOfertas = () => {
+const MainContainerProductosOfertas = ({productos}) => {
 
-  const  [productos, setProductos] = useState ([])
-    
-        useEffect( () =>{
-          const misProductos = query(collection(db, 'productos'))
-          getDocs(misProductos)
-            .then(res=>{
-              const nuevosProductos = res.docs.map(doc =>{
-                const data = doc.data()
-                return {id: doc.id, ...data}
-              })
-              setProductos(nuevosProductos)
-            })
-            .catch((error) => console.error("error al recibir los productos", error))
-        },[])
-
+  let productosConDescuento = productos.filter(producto => producto.descuento>0)
   const settings = {
     className: "center",
     infinite: true,
@@ -48,7 +29,7 @@ const MainContainerProductosOfertas = () => {
     <div className="slider-container mainContainerProductosOfertasSlider">
       <Slider {...settings}>
 
-        {productos.map((producto) => (
+        {productosConDescuento.map((producto) => (
           <TarjetaProducto key={producto.id} className="tarjetaProductosOfertas"producto={producto}/> 
         ))}
         
