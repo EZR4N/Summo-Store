@@ -8,9 +8,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 const MainContainerProductosMasVendidos = ({productos}) => {
-
-  let productosMasVendidos = productos.sort((a, b) => a.stock - b.stock)
-  productosMasVendidos.length = 10
+  
+  
     const settings = {
     className: "center",
     infinite: true,
@@ -35,7 +34,7 @@ const MainContainerProductosMasVendidos = ({productos}) => {
         {/* <div>
         <TarjetaProducto className='tarjetaProductosMasVendidos' imagenProducto={productos[0].img} producto={producto[0].nombre} marca={productos[0].marca} precio={productos[0].precio} />
         </div> */}
-        {productosMasVendidos.map((producto) => (
+        {productos.map((producto) => (
           <TarjetaProducto key={producto.id} className="tarjetaProductosOfertas" producto={producto}/> 
         ))}
       </Slider>
