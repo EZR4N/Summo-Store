@@ -9,6 +9,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 const MainContainerProductosMasVendidos = ({productos}) => {
     
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 35e9c39d98aff216e34233e14b54a5d7cedd9d49
     const settings = {
     className: "center",
     infinite: true,
