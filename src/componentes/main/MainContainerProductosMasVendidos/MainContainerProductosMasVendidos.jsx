@@ -10,7 +10,7 @@ import Slider from "react-slick";
 const MainContainerProductosMasVendidos = ({productos}) => {
 
   let productosMasVendidos = productos.sort((a, b) => a.stock - b.stock)
-  productosMasVendidos.length = 10
+  productosMasVendidos.length = 10 
     const settings = {
     className: "center",
     infinite: true,
