@@ -35,7 +35,7 @@ const MainContainerProductosMasVendidos = ({productos}) => {
         {/* <div>
         <TarjetaProducto className='tarjetaProductosMasVendidos' imagenProducto={productos[0].img} producto={producto[0].nombre} marca={productos[0].marca} precio={productos[0].precio} />
         </div> */}
-        {productos.map((producto) => (
+        {productosMasVendidos.map((producto) => (
           <TarjetaProducto key={producto.id} className="tarjetaProductosOfertas" producto={producto}/> 
         ))}
       </Slider>
