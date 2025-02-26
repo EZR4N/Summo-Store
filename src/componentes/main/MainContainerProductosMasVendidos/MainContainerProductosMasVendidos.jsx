@@ -8,7 +8,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 const MainContainerProductosMasVendidos = ({productos}) => {
-  
+    let productosMasVendidos = productos.sort((a, b) => a.stock - b.stock)
+    productosMasVendidos.length = 10 
   
     const settings = {
     className: "center",
