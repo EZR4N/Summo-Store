@@ -10,7 +10,7 @@ import MainContainerProductosMasVendidos from '../main/MainContainerProductosMas
 import NavBar from '../navBar/NavBar'
 import Footer from '../footer/Footer'
 import MainContainerProductosOfertas from '../main/MainContainerProductosMejoresOfertas/MainContainerProductosOfertas'
-const Home = ({productos}) => {
+const Home = () => {
   return (
     <>
     
@@ -20,10 +20,10 @@ const Home = ({productos}) => {
       <NuestrosProductos/> 
       <Categorias/>
       <ContainerAyudaApp/>     
-      <MainContainerProductosOfertas productos={productos}/>
-      <MainContainerProductosLanzamientos productos={productos}/>
+      <MainContainerProductosOfertas />
+      <MainContainerProductosLanzamientos />
       <MainContainerBanner/>
-      <MainContainerProductosMasVendidos productos={productos}/>
+      <MainContainerProductosMasVendidos />
       
 
     </>

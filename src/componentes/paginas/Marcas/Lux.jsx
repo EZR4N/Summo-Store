@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import ListadoProductos from '../ListadoProductos'
+import { ProductosContext } from '../../../context/ProductosContext'
 
-const Lux = ({productos}) => {
+const Lux = () => {
+  const { productos } = useContext(ProductosContext)
   let productosFiltrados = productos.filter(producto =>
     producto.marca==="Lux"
   )

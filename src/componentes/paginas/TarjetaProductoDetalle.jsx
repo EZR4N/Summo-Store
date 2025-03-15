@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { useState } from 'react'
 import MainContainerProductosOfertas from '../main/MainContainerProductosMejoresOfertas/MainContainerProductosOfertas'
 import { CarritoContext } from '../../context/CarritoContext'
+import TarjetaProductoDetalleDescuento from './TarjetaProductoDetalleDescuento'
 
 const TarjetaProductoDetalle = ({productos}) => {
     const { agregarAlCarrito } = useContext(CarritoContext)
@@ -32,6 +32,12 @@ const TarjetaProductoDetalle = ({productos}) => {
         <div className="tarjetaProductoDetalleInfo">
             <h2>{producto.nombre}</h2>
             <h3>{producto.marca}</h3>
+            {
+                producto.descuento > 0 && <h4 className='tarjetaProductoDetalleSinDescuento'>{producto.precioSinDescuento}</h4>
+            }
+            {
+                producto.descuento > 0 && <TarjetaProductoDetalleDescuento producto={producto}/>
+            }
             <h2>${producto.precio}</h2>
             <h4 className='tarjetaProductoDetalleInfoIva'>*Todos los precios incluyen IVA, excepto la provincia de Tierra Del Fuego</h4>
             

@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ListadoProductos from './ListadoProductos'
+import { ProductosContext } from '../../context/ProductosContext'
 
-const TodosLosProductos = ({productos}) => {
+const TodosLosProductos = () => {
+  const { productos } = useContext(ProductosContext)
   return (
     <div>
         <ListadoProductos productos={productos} titulo="Todos los productos"/>

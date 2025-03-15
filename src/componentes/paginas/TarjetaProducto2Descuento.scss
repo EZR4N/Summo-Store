@@ -1,0 +1,35 @@
+.tarjetaProducto2DescuentoContainer{
+    background-color: #F88A1B;
+    border: 1vw solid #F88A1B;
+    height: 2vh;
+    width: 4vw;
+    border-radius: 2vw;
+    position: absolute;
+    top: 13.5vh;
+    left: 23.5vw;
+    display: flex;
+        img{
+            position: absolute;
+            top: -0.8vh;
+            left: -0.7vw;
+            height: 2vh;
+        }
+
+        h3{
+            position: absolute;
+            top: -1vh;
+            left: -0.5vw;
+            font-size: 1vw;
+            color: white;
+            margin-left: 1vw;
+        }
+}
+
+.tarjeta2PrecioSinDescuento{
+    position: absolute;
+    font-size: 70%;
+    color: #6b6a6a !important;
+    text-decoration: line-through;
+    left: 18vw;
+    top: 12vh;
+}

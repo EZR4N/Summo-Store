@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import "./TarjetaProducto.scss"
 import { Link } from 'react-router-dom'
 import { CarritoContext } from '../../../context/CarritoContext'
+import TarjetaProductoDescuento from './TarjetaProductoDescuento'
 const TarjetaProducto = ({producto}) => {
   
     const { agregarAlCarrito } = useContext(CarritoContext)
@@ -32,7 +33,14 @@ const TarjetaProducto = ({producto}) => {
               <Link to={`/item/${producto.id}`}>
               <h4>{producto.nombre}</h4>
               <h3>{producto.marca}</h3>
-              <h3>{"$"+producto.precio+" /uni"}</h3>
+              {
+                producto.descuento > 0 && <h4 className='mainContainerCartaPrecioSinDescuento'>{producto.precioSinDescuento}</h4>
+              }
+
+              {
+              producto.descuento > 0 && <TarjetaProductoDescuento producto={producto}/>
+              }
+              <h3 className='mainContainerCartaPrecio'>{"$"+producto.precio+" /uni"}</h3>
               </Link>
             <div className="mainContainerCartaSumarRestar">
                 <img onClick={decrementar} src="/assets/imagenes/remove.png" alt="icono restar unidad" />

@@ -1,18 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./MainContainerProductosLanzamientos.scss"
 import TarjetaProducto from '../TarjetaProducto/TarjetaProducto'
-import { useState, useEffect } from 'react'
-import { db } from '../../../services/config'
-import { getDocs, collection, query } from 'firebase/firestore'
+
 
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-const MainContainerProductosLanzamientos = ({productos}) => {
-
+import { ProductosContext } from '../../../context/ProductosContext'
+const MainContainerProductosLanzamientos = () => {
+  const { productos, loading } = useContext(ProductosContext)
   let productosFiltrados = productos.filter(producto => producto.lanzamiento===true)
-  
 
   const settings = {
     className: "center",
@@ -34,6 +32,7 @@ const MainContainerProductosLanzamientos = ({productos}) => {
 
     <div className='mainContainerProductosLanzamientos'>
     <div className="slider-container mainContainerProductosLanzamientosSlider">
+      {loading && <div> Cargando productos... </div>}
       <Slider {...settings}>
       {productosFiltrados.map((producto) => (
           <TarjetaProducto key={producto.id} className="tarjetaProductosOfertas" producto={producto}/> 

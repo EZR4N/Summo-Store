@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import { db } from '../../services/config'
 import { CarritoContext } from '../../context/CarritoContext'
 import { collection, addDoc} from "firebase/firestore"
+import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const Checkout = () => {
     
@@ -14,11 +16,26 @@ const Checkout = () => {
     const [emailConfirmacion, setEmailConfirmacion] = useState("")
     const [orderId, setOrderId] = useState("")
     const [error, setError] = useState("")
+    const [compraAprobada, setCompraAprobada] = useState(false)
 
+    const navigate = useNavigate()
+        useEffect(() => {
+            compraAprobada && alertaCompraExitosa(orderId)
+        }, [compraAprobada, navigate])
+
+        const alertaCompraExitosa = (orderId) =>{
+            Swal.fire({
+                title: "Compra realizada con éxito!",
+                text: `Su numero de compra es ${orderId}\n Gracias por comprar en Summo Store!`,
+                icon: "success",
+                confirmButtonText: "Ok 👍"
+              }).then(() => {
+                navigate("/")
+              });
+        }
 
         const manejadorFormulario = (event) =>{
             event.preventDefault()
-
             if(!nombre || !apellido || !telefono || !email ||!emailConfirmacion){
                 setError("Por favor completa todos los campos")
                 return
@@ -47,6 +64,7 @@ const Checkout = () => {
             addDoc(collection(db, "ordenes"), orden)
             .then(docRef => {
                 setOrderId(docRef.id)
+                setCompraAprobada(true)
                 vaciarCarrito()
             })
             .catch(error =>{

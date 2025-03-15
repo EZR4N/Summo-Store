@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ListadoProductos from '../ListadoProductos'
+import { ProductosContext } from '../../../context/ProductosContext'
 
 
 
-const AderezosYCondimentos = ({productos}) => {
-
+const AderezosYCondimentos = () => {
+  const { productos } = useContext(ProductosContext)
   let productosFiltrados = productos.filter(producto =>
     producto.categoria ==="aderezosyCondimentos"  
   )

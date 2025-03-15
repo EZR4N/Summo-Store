@@ -1,15 +1,26 @@
 import "./navBar.scss"
 import CartWidget from "./CartWidget/CartWidget"
 import UsuarioNavBar from "./UsuarioNavBar/UsuarioNavBar"
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
+import { useNavigate } from "react-router-dom";
 
 import {Link, NavLink} from "react-router-dom"
+import { useState } from "react";
+
+
 
 const NavBar = () => {
+    const navigate = useNavigate()
+    const [busqueda, setBusqueda] = useState("")
+    const handleKeyDown = (event) => {
+        if(event.key === "Enter"){
+            navigate(`/busqueda/${busqueda}`)
+            setBusqueda("")
+
+        }
+    }
     return (
     <header>
         <nav className="headerNav1">
@@ -18,7 +29,7 @@ const NavBar = () => {
             </Link>
             <div className="headerDivInput">
                 <img src="/assets/imagenes/searchIcon.png" alt="icono búsqueda" />
-                <input type="text" placeholder="Buscar" className="headerInput"/>
+                <input value={busqueda} onChange={e => setBusqueda(e.target.value)} onKeyDown={handleKeyDown} type="text" placeholder="Buscar" className="headerInput"/>
             </div>
             <UsuarioNavBar/>
             <CartWidget/>

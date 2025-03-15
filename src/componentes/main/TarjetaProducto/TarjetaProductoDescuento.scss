@@ -1,0 +1,25 @@
+.tarjetaProductoDescuentoContainer{
+    background-color: #F88A1B;
+    border: 1vw solid #F88A1B;
+    height: 2vh;
+    width: 4vw;
+    border-radius: 2vw;
+    position: absolute;
+    left: 1vw;
+    display: flex;
+        img{
+            position: absolute;
+            top: -0.8vh;
+            left: -0.7vw;
+            height: 2vh;
+        }
+
+        h3{
+            position: absolute;
+            top: -1vh;
+            left: -0.5vw;
+            font-size: 1vw;
+            color: white;
+            margin-left: 1vw;
+        }
+}

@@ -3,9 +3,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import TarjetaProducto from '../TarjetaProducto/TarjetaProducto'
 import "./mainContainerProductosOfertas.scss"
+import { useContext } from "react";
+import { ProductosContext } from "../../../context/ProductosContext";
 
-const MainContainerProductosOfertas = ({productos}) => {
-
+const MainContainerProductosOfertas = () => {
+  const { productos, loading } = useContext(ProductosContext)
   let productosConDescuento = productos.filter(producto => producto.descuento>0)
   const settings = {
     className: "center",
@@ -27,6 +29,7 @@ const MainContainerProductosOfertas = ({productos}) => {
 
     <div className='mainContainerProductosOfertas'>
     <div className="slider-container mainContainerProductosOfertasSlider">
+      {loading && <div> Cargando productos... </div>}
       <Slider {...settings}>
 
         {productosConDescuento.map((producto) => (

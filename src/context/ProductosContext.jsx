@@ -4,9 +4,15 @@ import { db } from "../services/config";
 
 export const ProductosContext = createContext()
 
-export const ProductosProvider = ({Children}) =>{
+export const ProductosProvider = ({children}) =>{
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
+    
+    const aplicarDescuento = (producto) =>({
+        ...producto,
+        precioSinDescuento: producto.precio,
+        precio: producto.precio - (producto.precio * producto.descuento) /100
+    })
 
     useEffect(() => {
         const fetchProductos = async () => {
@@ -16,7 +22,12 @@ export const ProductosProvider = ({Children}) =>{
                     id: doc.id,
                     ...doc.data()
             }))
-            setProductos(productosData)
+
+            const productosConDescuento = productosData.map(producto =>(
+                producto.descuento > 0 ? aplicarDescuento(producto) : producto 
+            ))
+            
+            setProductos(productosConDescuento)
             } catch(error){
                 console.log('error al obtener los productos', error)
             } finally {

@@ -126,10 +126,35 @@
     }
 }
 
-//FOOTER
+@media screen and (max-width: 1024px) {
+    .mainContainerCartaFav{
 
-// .footerLinks1Ul{
-//     li{
-
-//     }
+        width: 10vw;
+        margin-top: 0vw !important;
+        height: 2vw;
+            img{
+                height: 2vw !important;
+                
+            }
     }
+    .mainContainerCartaImagen{
+        height: 12vw !important;
+        
+    }
+    
+    .mainContainerCartaSumarRestar{
+        margin-bottom: 0vw !important;
+        margin-top: 0vw !important;
+    }
+
+
+
+    .mainContainerCarta{
+        
+        h2, h3, h4{
+            margin-bottom: 0.1vw;
+        }
+    }
+}
+
+}

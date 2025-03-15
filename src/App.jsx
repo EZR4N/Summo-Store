@@ -2,6 +2,7 @@
 import "./Media.scss"
 import './App.scss'
 import {  CarritoProvider } from './context/CarritoContext';
+import { ProductosProvider } from "./context/ProductosContext";
 import { db } from './services/config';
 import { collection, addDoc, getDocs, query  } from 'firebase/firestore';
 import { useState, useEffect } from 'react'
@@ -37,30 +38,16 @@ import ProductoDetalle from './componentes/paginas/ProductoDetalle';
 import Cart from './componentes/Cart/Cart';
 import Checkout from './componentes/Checkout/Checkout';
 import TodosLosProductos from './componentes/paginas/TodosLosProductos'
+import BusquedaProductos from "./componentes/paginas/BusquedaProductos";
 
 function App() {
-
-    const  [productos, setProductos] = useState ([])
-    
-        useEffect( () =>{
-          const misProductos = query(collection(db, 'productos'))
-          getDocs(misProductos)
-            .then(res=>{
-              const nuevosProductos = res.docs.map(doc =>{
-                const data = doc.data()
-                return {id: doc.id, ...data}
-              })
-              setProductos(nuevosProductos)
-            })
-            .catch((error) => console.error("error al recibir los productos", error))
-        },[])
-  
   return (
     <>
 
     
 
     <BrowserRouter>
+    <ProductosProvider>
     <CarritoProvider>
     <header>
     <NavBar/>
@@ -68,26 +55,26 @@ function App() {
 
     <main>
         <Routes>
-          <Route path='/' element={<Home productos={productos}/>}/>
+          <Route path='/' element={<Home />}/>
           
-          <Route path="/item/:id" element={<ProductoDetalle productos={productos} />}/>
-
+          <Route path="/item/:id" element={<ProductoDetalle  />}/>
+          <Route path="/busqueda/:busqueda" element={<BusquedaProductos/>}/>
           //Categorías
-          <Route path='/categorias/articulos-de-limpieza' element={<ArticulosDeLimpieza productos={productos}/>}/>
-          <Route path='/categorias/aderezos-y-condimentos' element={<AderezosYCondimentos productos={productos}/>}/>
-          <Route path='/categorias/higiene-personal' element={<HigienePersonal productos={productos}/>}/>
+          <Route path='/categorias/articulos-de-limpieza' element={<ArticulosDeLimpieza />}/>
+          <Route path='/categorias/aderezos-y-condimentos' element={<AderezosYCondimentos />}/>
+          <Route path='/categorias/higiene-personal' element={<HigienePersonal />}/>
 
 
           //Marcas
-          <Route path='/marcas/Axe' element={<Axe productos={productos}/>}/>
-          <Route path='/marcas/Cif' element={<Cif productos={productos}/>}/>
-          <Route path='/marcas/Dove' element={<Dove productos={productos}/>}/>
-          <Route path='/marcas/Hellmanns' element={<Hellmanns productos={productos}/>}/>
-          <Route path='/marcas/Knorr' element={<Knorr productos={productos}/>}/>
-          <Route path='/marcas/Lux' element={<Lux productos={productos}/>}/>
-          <Route path='/marcas/Rexona' element={<Rexona productos={productos}/>}/>
-          <Route path='/marcas/Sedal' element={<Sedal productos={productos}/>}/>
-          <Route path='/marcas/Skip' element={<Skip productos={productos}/>}/>
+          <Route path='/marcas/Axe' element={<Axe />}/>
+          <Route path='/marcas/Cif' element={<Cif />}/>
+          <Route path='/marcas/Dove' element={<Dove/>}/>
+          <Route path='/marcas/Hellmanns' element={<Hellmanns/>}/>
+          <Route path='/marcas/Knorr' element={<Knorr/>}/>
+          <Route path='/marcas/Lux' element={<Lux/>}/>
+          <Route path='/marcas/Rexona' element={<Rexona/>}/>
+          <Route path='/marcas/Sedal' element={<Sedal/>}/>
+          <Route path='/marcas/Skip' element={<Skip/>}/>
           
           // Cart
 
@@ -96,7 +83,7 @@ function App() {
 
           // Listados de productos filtrados
 
-          <Route path='/productos' element={<TodosLosProductos productos={productos}/>} />
+          <Route path='/productos' element={<TodosLosProductos/>} />
         </Routes>
 
     </main>
@@ -104,6 +91,7 @@ function App() {
         <Footer/>
         </footer>
         </CarritoProvider>
+        </ProductosProvider>
       </BrowserRouter>
     </>
   )

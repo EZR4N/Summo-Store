@@ -1,18 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./MainContainerProductosMasVendidos.scss"
 import TarjetaProducto from '../TarjetaProducto/TarjetaProducto'
-import { useState, useEffect } from 'react'
-import { db } from '../../../services/config'
-import { getDocs, collection, query } from 'firebase/firestore'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-const MainContainerProductosMasVendidos = ({productos}) => {
+import { ProductosContext } from '../../../context/ProductosContext';
+const MainContainerProductosMasVendidos = () => {
+    const { productos, loading} = useContext(ProductosContext)
     
-<<<<<<< HEAD
-=======
-  
->>>>>>> 35e9c39d98aff216e34233e14b54a5d7cedd9d49
+    
+
     const settings = {
     className: "center",
     infinite: true,
@@ -33,10 +30,8 @@ const MainContainerProductosMasVendidos = ({productos}) => {
 
     <div className='mainContainerProductosMasVendidos'>
     <div className="slider-container mainContainerProductosMasVendidosSlider">
+      {loading && <div>Cargando productos...</div>}
       <Slider {...settings}>
-        {/* <div>
-        <TarjetaProducto className='tarjetaProductosMasVendidos' imagenProducto={productos[0].img} producto={producto[0].nombre} marca={productos[0].marca} precio={productos[0].precio} />
-        </div> */}
         {productos.map((producto) => (
           <TarjetaProducto key={producto.id} className="tarjetaProductosOfertas" producto={producto}/> 
         ))}
