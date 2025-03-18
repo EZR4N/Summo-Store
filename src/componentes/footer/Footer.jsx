@@ -71,9 +71,6 @@ const Footer = () => {
     </div>
 
     <div className='footerCopyright'>
-        <h3>
-            Copyright @ Buenaimpresión2025
-        </h3>
     </div>
 </>
   )

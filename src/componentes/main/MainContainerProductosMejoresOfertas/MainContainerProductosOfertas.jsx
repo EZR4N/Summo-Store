@@ -5,6 +5,7 @@ import TarjetaProducto from '../TarjetaProducto/TarjetaProducto'
 import "./mainContainerProductosOfertas.scss"
 import { useContext } from "react";
 import { ProductosContext } from "../../../context/ProductosContext";
+import MoonLoader from "react-spinners/MoonLoader";
 
 const MainContainerProductosOfertas = () => {
   const { productos, loading } = useContext(ProductosContext)
@@ -29,7 +30,8 @@ const MainContainerProductosOfertas = () => {
 
     <div className='mainContainerProductosOfertas'>
     <div className="slider-container mainContainerProductosOfertasSlider">
-      {loading && <div> Cargando productos... </div>}
+      {loading && <div className='sliderSpinner'> 
+        <MoonLoader color="#F88A1B" size={50}/> </div>}
       <Slider {...settings}>
 
         {productosConDescuento.map((producto) => (

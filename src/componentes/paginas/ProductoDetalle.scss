@@ -31,6 +31,7 @@
 
 .tarjetaProductoDetalleAgregarAlCarrito{
     height: 3vw;
+    cursor: pointer;
 }
 
 .tarjetaProductoDetalleContador{
@@ -47,6 +48,10 @@
         margin-left: 2.5vw;
         margin-right: 2.5vw;
     }
+
+    img{
+        cursor: pointer;
+    }
 }
 
 .tarjetaProductoDetalleDescripcion{
@@ -55,4 +60,8 @@
     h3{
         font-size: 2vw;
     }
+}
+
+.productoDetalleSpinner{
+    margin-top: 20vh;
 }

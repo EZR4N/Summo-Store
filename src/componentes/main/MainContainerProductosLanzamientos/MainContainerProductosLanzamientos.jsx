@@ -8,10 +8,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { ProductosContext } from '../../../context/ProductosContext'
+import MoonLoader from 'react-spinners/MoonLoader';
 const MainContainerProductosLanzamientos = () => {
   const { productos, loading } = useContext(ProductosContext)
   let productosFiltrados = productos.filter(producto => producto.lanzamiento===true)
-
+  
   const settings = {
     className: "center",
     infinite: true,
@@ -32,7 +33,8 @@ const MainContainerProductosLanzamientos = () => {
 
     <div className='mainContainerProductosLanzamientos'>
     <div className="slider-container mainContainerProductosLanzamientosSlider">
-      {loading && <div> Cargando productos... </div>}
+      {loading && <div className='sliderSpinner'> 
+        <MoonLoader color="#F88A1B" size={50}/> </div>}
       <Slider {...settings}>
       {productosFiltrados.map((producto) => (
           <TarjetaProducto key={producto.id} className="tarjetaProductosOfertas" producto={producto}/> 

@@ -1,26 +1,35 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import MainContainerProductosOfertas from '../main/MainContainerProductosMejoresOfertas/MainContainerProductosOfertas'
 import { CarritoContext } from '../../context/CarritoContext'
 import TarjetaProductoDetalleDescuento from './TarjetaProductoDetalleDescuento'
+import ProductoDetalleAgregado from './TarjetaProductoDetalleAgregado'
 
 const TarjetaProductoDetalle = ({productos}) => {
     const { agregarAlCarrito } = useContext(CarritoContext)
+    const [agregado, setAgregado] = useState(false)
     let {id} = useParams()
     let producto = productos.find(producto => producto.id == id)
     const [contador, setContador] = useState(0)
     let incrementar = () =>{
-        contador < producto.stock && setContador(contador+1)
+        contador < producto.stock && setContador((prev) => prev +1)
     }
 
     let decrementar = () =>{
-        contador > 0 && setContador(contador-1)
+        contador > 0 && setContador((prev) => prev-1)
     }
 
     let agregar = (producto, cantidad) =>{ 
+        if (contador > 0 ){
         agregarAlCarrito(producto, cantidad)
+        setAgregado(true)
         setContador(0)
+        }
     }
+
+    useEffect(() => {
+        setAgregado(false)
+    }, [id])
 
     return (
         <>
@@ -41,6 +50,13 @@ const TarjetaProductoDetalle = ({productos}) => {
             <h2>${producto.precio}</h2>
             <h4 className='tarjetaProductoDetalleInfoIva'>*Todos los precios incluyen IVA, excepto la provincia de Tierra Del Fuego</h4>
             
+            {
+                agregado?(
+                    <>
+                    <ProductoDetalleAgregado/>
+                    </>
+                ):(
+                    <>
             <div className="tarjetaProductoDetalleContadorCarritoContainer">
             <div className="tarjetaProductoDetalleContador">
                 <img onClick={decrementar} src="/assets/imagenes/remove.png" alt="icono restar unidad" />
@@ -49,6 +65,9 @@ const TarjetaProductoDetalle = ({productos}) => {
             </div>
             <img onClick={()=>agregar(producto, contador)} className='tarjetaProductoDetalleAgregarAlCarrito' src="/assets/imagenes/agregar (2).png" alt="icono agregar carrito" />
             </div>
+                    </>
+                )
+            }
         </div>
     </div>
 

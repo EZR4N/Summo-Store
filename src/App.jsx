@@ -3,13 +3,6 @@ import "./Media.scss"
 import './App.scss'
 import {  CarritoProvider } from './context/CarritoContext';
 import { ProductosProvider } from "./context/ProductosContext";
-import { db } from './services/config';
-import { collection, addDoc, getDocs, query  } from 'firebase/firestore';
-import { useState, useEffect } from 'react'
-
-
-// Páginas
-
 
 //BOOTSTRAP
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -82,7 +75,6 @@ function App() {
           <Route path="/checkout" element={<Checkout/>}/>
 
           // Listados de productos filtrados
-
           <Route path='/productos' element={<TodosLosProductos/>} />
         </Routes>
 

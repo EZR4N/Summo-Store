@@ -18,3 +18,23 @@
     }
 }
 
+.listadoProductosSinProductos{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        h2{
+            font-size: 2vw;
+            text-align: center;
+        }
+
+        img{
+            
+            height: 60vh;
+        }
+}
+
+.productoBusquedaSpinner{
+    margin-top: 20vh;
+}

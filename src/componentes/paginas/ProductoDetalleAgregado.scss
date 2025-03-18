@@ -1,0 +1,42 @@
+.productoDetalleAgregadoContainer{
+    background-color: #00C008;
+    border: #00C008 solid 0.1vw;
+    border-radius: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    height: 10vh;
+    width: 24vw;
+    p{
+            margin-top: 2.5vh;
+            text-align: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1vw;
+        }
+}
+
+.productoDetalleAgregadoHeaderContainer{
+    background-color: #00C008;
+    position: absolute;
+    top: -15.3vh;
+    width: 100vw;
+    height: 4.5vh;
+    right: -7vw;
+    display: flex;
+    justify-content: center;
+    
+        img{
+            margin-top: 0.6vh;
+            height: 3vh;
+        }
+        p{
+            margin-top: 0.5vh;
+            text-align: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1vw;
+        }
+}

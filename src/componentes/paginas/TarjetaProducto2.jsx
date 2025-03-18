@@ -5,8 +5,10 @@ import {Link} from "react-router-dom"
 import "./TarjetaProducto2.scss"
 import { CarritoContext } from '../../context/CarritoContext'
 import TarjetaProducto2Descuento from './TarjetaProducto2Descuento'
+import TarjetaProducto2Agregado from './TarjetaProducto2Agregado'
 const TarjetaProducto2 = ({producto}) => {
     const [cantidad, setCantidad] = useState(0)
+    const [agregado, setAgregado] = useState(false)
           const {agregarAlCarrito} = useContext(CarritoContext)
 
           const incrementar = () =>{
@@ -19,6 +21,7 @@ const TarjetaProducto2 = ({producto}) => {
 
           const agregar= (producto, cantidad) =>{
             agregarAlCarrito(producto, cantidad)
+            setAgregado(true)
             setCantidad(0)
           }
   return (
@@ -56,12 +59,22 @@ const TarjetaProducto2 = ({producto}) => {
               <h3>{"$"+producto.precio+" /uni"}</h3>
               </Link>
               </div>
-            <div className="listadoProductosTarjetaSumarRestar">
-                <img onClick={decrementar} src="/assets/imagenes/remove.png" alt="icono restar unidad" />
-                    <h3> {cantidad}</h3>
-                <img onClick={incrementar} src="/assets/imagenes/add.png" alt="icono agregar unidad" />
-            </div>
-            <img onClick={(e) => agregar(producto, cantidad)} className='listadoProductosTarjetaAgregarAlCarrito' src="/assets/imagenes/agregar (2).png" alt="icono agregar carrito" />
+              {
+                agregado?(
+                  <>
+                    <TarjetaProducto2Agregado/>
+                  </>
+                ):(
+                  <>
+                  <div className="listadoProductosTarjetaSumarRestar">
+                      <img onClick={decrementar} src="/assets/imagenes/remove.png" alt="icono restar unidad" />
+                          <h3> {cantidad}</h3>
+                      <img onClick={incrementar} src="/assets/imagenes/add.png" alt="icono agregar unidad" />
+                  </div>
+                  <img onClick={(e) => agregar(producto, cantidad)} className='listadoProductosTarjetaAgregarAlCarrito' src="/assets/imagenes/agregar (2).png" alt="icono agregar carrito" />                  
+                  </>
+                )
+              }
 
 
      </div>
