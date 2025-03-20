@@ -98,7 +98,7 @@ const NavBar = () => {
                         </NavDropdown.Item>
 
                         <NavDropdown.Item className="headerDropdownItem">
-                        <NavLink to="/marcas/Hellmans">
+                        <NavLink to="/marcas/Hellmanns">
                             Hellmann's
                         </NavLink>
                         </NavDropdown.Item>

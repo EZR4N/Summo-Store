@@ -22,7 +22,7 @@ const CartWidget = () => {
           } productos</li>
         </NavLink>
       </ul>
-      <Link to="/carrito">
+      <Link className='addCartWidget' to="/carrito">
       <img src="/assets/imagenes/add-circle-outline.png" alt="icono" />
       </Link>
     </div>

@@ -26,9 +26,6 @@ const TarjetaProducto = ({producto}) => {
   return (
     
             <div className="mainContainerCarta">
-              <div className="mainContainerCartaFav">
-                <img src="/assets/imagenes/fav.png" alt="icono favorito" />
-              </div>
               <Link to={`/item/${producto.id}`}>
               <img className='mainContainerCartaImagen' src={producto.img} alt={"imagen "+ producto.nombre} />
               </Link>
@@ -42,7 +39,7 @@ const TarjetaProducto = ({producto}) => {
               {
               producto.descuento > 0 && <TarjetaProductoDescuento producto={producto}/>
               }
-              <h3 className='mainContainerCartaPrecio'>{"$"+producto.precio+" /uni"}</h3>
+              <h3 className='mainContainerCartaPrecio'>{"$"+producto.precio}</h3>
               </Link>
               {
                 agregado?(

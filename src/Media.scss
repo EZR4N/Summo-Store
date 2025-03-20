@@ -51,41 +51,243 @@
         }
     }
 }
+
+.mainContainerCartaFav{
+
+    width: 10vw;
+    margin-top: 0vw !important;
+    height: 2vw;
+        img{
+            height: 2vw !important;
+            
+        }
+}
+.mainContainerCartaImagen{
+    height: 12vw !important;
+    
+}
+
+.mainContainerCartaSumarRestar{
+    margin-bottom: 0vw !important;
+    margin-top: 0vw !important;
+}
+
+
+
+.mainContainerCarta{
+    
+    h2, h3, h4{
+        margin-bottom: 0.1vw;
+    }
+}
 }
 
 @media screen and (max-width: 768px) {
 
+//HEADER
+header{
+    height: 10vh !important;
+
+        .headerNav1{
+            width: 92vw;
+            height: 10vh;
+            a{
+                height: 4vh;
+            }
+            
+            ul{
+                height: 4vh;
+                padding-left: 0vw;
+                    img{
+                        height: 1.5vh;
+                    }      
+                    li{
+                        font-size: 1vh;
+                    }
+            }
+        }
+
+        
+
+}
+
+.headerDivCarrito{
+    height: 3.5vh !important;
+    width: 20vw !important;
+        a{
+            margin-left: 1vw !important;
+            img{
+                margin-top: 0.6vh;
+                height: 1vh;
+            }   
+        }
+
+        ul{
+            margin-left: 0vw;
+            width: 15vw;
+            margin-right: 3vw !important;
+            a{  
+                margin-top: 0.4vh;
+                font-size: 0.8vh;
+                li{
+                margin-top: 0.2vh;
+                }
+            }
+        }
+}
+
+.headerNav2{
+    bottom: -4vh !important;
+    height: 5vh !important;
+}
+
+.headerNav2Item{
+    font-size: 50% !important;
+    .headerDropdown{
+        a{
+            font-size: 0.6vh !important;
+        }
+    }
+}
+
+.addCartWidget{
+    display: none;
+}
+
+.headerLogo{
+    height: 4vh;
+    width: 15vw !important;
+}
+
+.headerDivInput{
+    margin-left: 3vw;
+    height: 5vh;
+        img{
+            height: 0.6vh;
+        }
+        input{
+            height: 3vh;
+        }
+}
+
+//MAIN
+
+main{
+    margin-top: 3vh;
+}
+
 // Carousel Home
     .mainHomeCarousel{
+        margin-top: 2vh !important;
+        width: 95vw !important;
+        margin-bottom: 4vh;
+            img{
+                height: 14vh !important;
+            }
+
         .carousel-indicators{
+            display: none;
+        }
+        .carousel-control-prev, .carousel-control-next{
             display: none;
         }
     }
 
-//Main Container Productos Ofertas
-
-    .mainContainerProductosOfertas{
-    .carousel-control-next{
-        right:  -6vw !important;
+.mainDivNuestrosProductosTitulo{
+    h2{
+    font-size: 1.2vh !important;
     }
 }
 
-// Main Container Productos Lanzamientos
+.mainDivNuestrosProductosTarjetas{
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.mainContainerProductosLanzamientos{
-    .carousel-control-next{
-        right:  -6vw !important;
+.mainNuestrosProductosTarjetaCategoriaContainer{
+    width: 15vw !important;
+    height: 5vh;
+    margin-bottom: 2vh;
+        img{
+            width: 5vh !important;
+            height: 5vh;
+        }
+}
+
+
+.mainCategoriasTitulo{
+    h2{
+        font-size: 1.4vh !important;
     }
 }
 
-// Main Container Productos Mas Vendidos
-    .mainContainerProductosMasVendidos{
-    .carousel-control-next{
-        right:  -6vw !important;
+.mainCategoriasDivTarjetas{
+    
+    img{
+        width: 15vw !important;
+        height: 9vh !important;
     }
 }
 
+.mainCategoriaTitulo{
+    margin-top: 1.3vh;
+}
 
+.mainDivAyudaApp{
+    flex-direction: column !important;
+    width: 90vw;
+    align-items: center;
+        img{
+            width: 65vw !important;
+            height: 15vh !important;
+            margin-bottom: 2vh;
+        }
+
+}
+
+
+.mainContainerCarta{
+    height: 25vh !important;
+}
+
+
+
+.tarjetaProductoDescuentoContainer{
+        bottom: 10.2vh;
+        width: 5vw !important;
+        height: 2vh !important;
+        
+    img{
+        right: 3vw !important;
+        top: 0.2vh !important;
+        height: 1vh !important;
+    }
+    
+        font-size: 50% !important; 
+    
+}
+
+.mainContainerCarta{
+    h4{
+        font-size: 1.2vh !important;
+        margin-bottom: 1vh;
+    }
+    h3{
+        font-size: 1.5vh !important;
+    }
+}
+
+.mainContainerCartaSumarRestar{
+    height: 2.5vh;
+    width: 15vw !important;
+    margin-bottom: 0vw !important;
+}
+
+
+.mainContainerCartaAgregarAlCarrito{
+height: 2.5vh !important;
+width: 15vw !important
+}
 //FOOTER
 
 .footerLinks1{
@@ -103,6 +305,7 @@
 
 @media screen and (max-width: 480px) {
 
+    
 //Main Container Productos Ofertas
 
     .mainContainerProductosOfertas{
@@ -123,37 +326,6 @@
     .mainContainerProductosMasVendidos{
     .carousel-control-next{
         right:  -7.5vw !important;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .mainContainerCartaFav{
-
-        width: 10vw;
-        margin-top: 0vw !important;
-        height: 2vw;
-            img{
-                height: 2vw !important;
-                
-            }
-    }
-    .mainContainerCartaImagen{
-        height: 12vw !important;
-        
-    }
-    
-    .mainContainerCartaSumarRestar{
-        margin-bottom: 0vw !important;
-        margin-top: 0vw !important;
-    }
-
-
-
-    .mainContainerCarta{
-        
-        h2, h3, h4{
-            margin-bottom: 0.1vw;
-        }
     }
 }
 
