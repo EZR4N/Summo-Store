@@ -46,7 +46,7 @@ header{
     border-radius: 15vw;
     width: 13vw;
         h2{
-            margin-left: 1.8vw;
+            margin-left: 1vh;
             margin-top: 1vh;
             color: white;
             text-align: center;
@@ -139,7 +139,7 @@ header{
                 font-size: 1.6vh;
                 text-align: center;
                 position: absolute;
-                right: -5.7vw;
+                right: -2.8vh;
                 top: -0.6vh;
                 color: white;
                 }
@@ -189,6 +189,7 @@ header{
             font-size: 2vh;
             height: 100%;
             width: 95vw;
+            background-color: white;
         }
 }
 
@@ -274,7 +275,7 @@ main{
 
 
 .tarjetaProductoDescuentoContainer{
-        bottom: 12vh;
+        bottom: 10vh;
         width: 15vw !important;
         height: 2vh !important;
         margin-left: 9vw;
@@ -429,6 +430,52 @@ margin-bottom: 1vh !important;
         margin-bottom: 0.1vw;
     }
 }
+
+//footer
+
+.footerContainer{
+    height: 20vh !important;
+    justify-content: center !important;
+}
+
+.footerLinks1, .footerLinks2, .footerRedesSociales, .footerLogoContainer{
+    height: 10vh !important;
+    
+}
+
+.footerLinks1, .footerLinks2{
+    li{
+        font-size: 1vh !important;
+    }
+}
+.footerLogoContainer{
+    margin-left: 5vw !important;
+    width: 20vw;
+}
+
+.footerRedesSociales{
+    margin-right: 0vw;
+}
+
+.footerRedesSocialesIconosContainer{
+    img{
+        height: 1.5vh !important;
+    }
+}
+
+.footerBotonVolverAlPrincipio{
+    height: 2vh !important; 
+
+    img{
+        height: 1.5vh !important;
+    }
+
+    h3{
+        font-size: 1.5vh !important;
+        width: 20vw !important;
+    }
+}
+
 }
 
 @media screen and (max-width: 768px) {
