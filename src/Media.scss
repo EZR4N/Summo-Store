@@ -436,6 +436,7 @@ margin-bottom: 1vh !important;
 .footerContainer{
     height: 20vh !important;
     justify-content: center !important;
+    
 }
 
 .footerLinks1, .footerLinks2, .footerRedesSociales, .footerLogoContainer{
@@ -451,6 +452,12 @@ margin-bottom: 1vh !important;
 .footerLogoContainer{
     margin-left: 5vw !important;
     width: 20vw;
+        img{
+            position: absolute !important;
+            left: 8vw !important;
+            height: 5vh;
+            top: 9vh !important;
+        }
 }
 
 .footerRedesSociales{
