@@ -3,18 +3,36 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import TarjetaProducto from '../TarjetaProducto/TarjetaProducto'
 import "./mainContainerProductosOfertas.scss"
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ProductosContext } from "../../../context/ProductosContext";
 import MoonLoader from "react-spinners/MoonLoader";
 
 const MainContainerProductosOfertas = () => {
   const { productos, loading } = useContext(ProductosContext)
   let productosConDescuento = productos.filter(producto => producto.descuento>0)
+  
+  const [cantidadCards, setCantidadCards] = useState(4.15)
+    const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 768px)").matches);
+  
+    useEffect(() => {
+      const mediaQuery = window.matchMedia("(max-width: 768px)");
+      setIsMobile(mediaQuery.matches);
+  
+      const handleResize = () => setIsMobile(mediaQuery.matches);
+      mediaQuery.addEventListener("change", handleResize);
+  
+      return () => mediaQuery.removeEventListener("change", handleResize);
+    }, []);
+  
+    useEffect(() => {
+      setCantidadCards(isMobile ? 2.15 : 4.15);
+    }, [isMobile])
+
   const settings = {
     className: "center",
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 4.15,
+    slidesToShow: cantidadCards,
     swipeToSlide: true,
     afterChange: function(index) {
       console.log(

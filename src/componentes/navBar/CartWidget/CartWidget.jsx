@@ -13,7 +13,7 @@ const CartWidget = () => {
       </Link>
       <ul>
         <NavLink to="/carrito">
-        <li>${total}</li>
+        <li className='total'>${total}</li>
         </NavLink>
         <NavLink to="/carrito">
         <li>

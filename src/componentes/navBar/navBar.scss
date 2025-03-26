@@ -109,3 +109,29 @@ li{
     margin-right: 0.4vw;
     cursor: pointer;
 }
+
+.menu,  .menu-button{
+    display: none;
+}
+
+.categorias{
+    display: none;
+}
+
+.categorias.open{
+    display: flex !important;
+    flex-direction: column;
+    margin-top: 0vh;
+    margin-bottom: 7vh;
+} 
+
+.marcas{
+    display: none;
+}
+
+.marcas.open{
+    display: flex !important;
+    flex-direction: column;
+    margin-top: 0vh;
+    margin-bottom: 7vh;
+}

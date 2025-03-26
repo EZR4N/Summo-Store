@@ -31,7 +31,7 @@ const TarjetaProducto = ({producto}) => {
               </Link>
               <Link to={`/item/${producto.id}`}>
               <h4>{producto.nombre}</h4>
-              <h3>{producto.marca}</h3>
+              <h3  className='mainContainerCartaMarca'>{producto.marca}</h3>
               {
                 producto.descuento > 0 && <h4 className='mainContainerCartaPrecioSinDescuento'>{producto.precioSinDescuento}</h4>
               }

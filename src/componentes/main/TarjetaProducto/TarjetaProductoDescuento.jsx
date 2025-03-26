@@ -4,7 +4,7 @@ const TarjetaProductoDescuento = ({producto}) => {
   return (
     <div className='tarjetaProductoDescuentoContainer'>
         <img src="/assets/imagenes/pricetag-outline.png" alt="Descuento icono" />
-        <h3> -{producto.descuento}% </h3>
+        <h3 className='tarjetaProductoDescuento'> -{producto.descuento}% </h3>
     </div>
   )
 }

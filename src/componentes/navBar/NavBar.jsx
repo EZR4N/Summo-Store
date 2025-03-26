@@ -7,20 +7,24 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useNavigate } from "react-router-dom";
 
 import {Link, NavLink} from "react-router-dom"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
 const NavBar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [categoriasOpen, setCategoriasOpen] = useState(false)
+    const [marcasOpen, setMarcasOpen] = useState(false)
     const navigate = useNavigate()
     const [busqueda, setBusqueda] = useState("")
     const handleKeyDown = (event) => {
         if(event.key === "Enter"){
             navigate(`/busqueda/${busqueda}`)
             setBusqueda("")
-
         }
     }
+
+
     return (
     <header>
         <nav className="headerNav1">
@@ -33,6 +37,45 @@ const NavBar = () => {
             </div>
             <UsuarioNavBar/>
             <CartWidget/>
+            <button className="menu-button" onClick={() => setIsOpen(!isOpen)}>
+            <h2>☰</h2>
+            </button>
+
+      <ul className={`menu ${isOpen ? "open" : ""}`}>
+        <li onClick={(e) => { 
+            setMarcasOpen(false)
+            setCategoriasOpen(!categoriasOpen)}}>Categorias</li>
+            <li>
+                <ul className={`categorias ${categoriasOpen ? "open" : ""}`}>
+                    <li><Link to='/categorias/articulos-de-limpieza'>Articulos de limpieza </Link></li>
+                    <li><Link to='/categorias/aderezos-y-condimentos'>Aderezos y condimentos</Link></li>
+                    <li className="navBarMenuLastLi"><Link to='/categorias/higiene-personal'>Higiene personal</Link></li>
+                </ul>
+            </li>
+        <li>Ofertas</li>
+        <li></li>
+        <li onClick={(e) => {
+            setCategoriasOpen(false)
+            setMarcasOpen(!marcasOpen)}}
+            className="navBarMenuLastLi">
+                Marcas</li>
+            <li >
+            <ul className={`marcas ${marcasOpen ? 'open' : ''}`}>
+                <li><Link to='/marcas/Knorr'>Knorr</Link></li>
+                <li> <Link to='/marcas/Axe'>Axe</Link></li>
+                <li><Link to='/marcas/Cif'>Cif</Link></li>
+                <li><Link to='/marcas/Dove'>Dove</Link></li>
+                <li><Link to='/marcas/Hellmanns'>Hellmann´s</Link></li>
+                <li><Link to='/marcas/Lux'>Lux</Link></li>
+                <li><Link to='/marcas/Rexona'>Rexona</Link></li>
+                <li> <Link to='/marcas/Sedal'>Sedal</Link></li>
+                <li className="navBarMenuLastLi"><Link to='/marcas/Skip'>Skip</Link></li>
+            </ul>
+            </li>
+
+      </ul>
+
+
         </nav>
         <nav className="headerNav2">
             <Navbar>
