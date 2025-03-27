@@ -84,7 +84,7 @@ const ListadoProductos = ({productos, titulo}) => {
               </div>
 
               <div>
-                Ordenar por:
+                <p>Ordenar por:</p>
                 <select
                   name="orden"
                   value={filters.orden}
@@ -102,7 +102,7 @@ const ListadoProductos = ({productos, titulo}) => {
           <div className="listadoProductosProductos">
             <div className="listadoProductosTitulo">
               <h2>{titulo}</h2>
-              <h3>{productosFiltrados.length} productos encontrados</h3>
+              <h3 className='listadoProductosEncontrados'>{productosFiltrados.length} productos encontrados</h3>
             </div>
 
             {productosFiltrados.map((producto) => (

@@ -27,12 +27,6 @@ const TarjetaProducto2 = ({producto}) => {
   return (
     <>
      <div className="listadoProductosTarjetaContainer">
-        
-            <div className="listadoProductosTarjetaFavContainer">
-            
-                <img src="/assets/imagenes/fav.png" alt="icono favorito" />
-            
-            </div>
             
             <div className='listadoProductosTarjetaImgContainer'>
             <Link to={`/item/${producto.id}`}>
