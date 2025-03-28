@@ -3,8 +3,12 @@
     display: flex;
     width: 99vw;
 }
-
+listadoProductosFiltrosForm{
+    display: flex;
+}
 .listadoProductosFiltros{
+    display: flex;
+    flex-direction: column;
     width:10vw;
     margin-left: 10vw;
     margin-right: 10vw;

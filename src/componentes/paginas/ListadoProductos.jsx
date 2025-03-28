@@ -83,7 +83,7 @@ const ListadoProductos = ({productos, titulo}) => {
                 <label htmlFor="lanzamiento">Lanzamiento</label>
               </div>
 
-              <div>
+              <div className='listadoProductosFiltrosOrden'>
                 <p>Ordenar por:</p>
                 <select
                   name="orden"

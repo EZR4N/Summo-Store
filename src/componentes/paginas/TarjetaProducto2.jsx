@@ -36,10 +36,10 @@ const TarjetaProducto2 = ({producto}) => {
 
               <div className="listadoProductosTarjetaInfo">
               <Link to={`/item/${producto.id}`}>
-              <h4>{producto.nombre}</h4>
+              <h4 className='listadoProductosTarjetaNombre'>{producto.nombre}</h4>
               </Link>
               <Link to={`/item/${producto.id}`}>
-              <h3>{producto.marca}</h3>
+              <h3 className='listadoProductosTarjetaMarca'>{producto.marca}</h3>
               </Link>
               <Link to={`/item/${producto.id}`}>
               
@@ -50,7 +50,7 @@ const TarjetaProducto2 = ({producto}) => {
               {
                 producto.descuento > 0 && <TarjetaProducto2Descuento producto={producto}/>
               }
-              <h3>{"$"+producto.precio+" /uni"}</h3>
+              <h3 className='listadoProductosTarjetaPrecio'>{"$"+producto.precio}</h3>
               </Link>
               </div>
               {
