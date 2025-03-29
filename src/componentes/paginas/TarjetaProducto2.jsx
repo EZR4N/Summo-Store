@@ -61,9 +61,9 @@ const TarjetaProducto2 = ({producto}) => {
                 ):(
                   <>
                   <div className="listadoProductosTarjetaSumarRestar">
-                      <img onClick={decrementar} src="/assets/imagenes/remove.png" alt="icono restar unidad" />
+                      <img onClick={decrementar} className='listadoProductosRestar' src="/assets/imagenes/remove.png" alt="icono restar unidad" />
                           <h3> {cantidad}</h3>
-                      <img onClick={incrementar} src="/assets/imagenes/add.png" alt="icono agregar unidad" />
+                      <img onClick={incrementar} className='listadoProductosSumar' src="/assets/imagenes/add.png" alt="icono agregar unidad" />
                   </div>
                   <img onClick={(e) => agregar(producto, cantidad)} className='listadoProductosTarjetaAgregarAlCarrito' src="/assets/imagenes/agregar (2).png" alt="icono agregar carrito" />                  
                   </>
