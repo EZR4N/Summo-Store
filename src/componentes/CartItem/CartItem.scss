@@ -1,5 +1,6 @@
 .cartItemContainer {
-    width: 50vw;
+    width: 70vw;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,18 +17,19 @@
     }
   
     h2 {
-      font-size: 18px;
+      font-size: 1.2vw;
       color: #333;
-      margin: 5px 0;
+      margin: 1vw 0;
     }
   
     .cartItemNombre {
-      font-weight: bold;
-      color: #ff7f00; // Naranja similar al botón de la imagen
+      width: 35vw;
+      overflow: none;
+      font-weight: bold; 
     }
   
     .cartItemCantidad {
-      font-size: 16px;
+      font-size: 1.5vw;
       color: #555;
     }
   
@@ -42,9 +44,9 @@
       color: white;
       border: none;
       padding: 8px 12px;
-      border-radius: 5px;
+      border-radius: 1vw;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 1vw;
       transition: background 0.3s ease;
   
       &:hover {

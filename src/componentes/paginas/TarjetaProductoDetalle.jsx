@@ -39,15 +39,15 @@ const TarjetaProductoDetalle = ({productos}) => {
         </div>
 
         <div className="tarjetaProductoDetalleInfo">
-            <h2>{producto.nombre}</h2>
-            <h3>{producto.marca}</h3>
+            <h2 className='tarjetaProductoDetalleNombre'>{producto.nombre}</h2>
+            <h3 className='tarjetaProductoDetalleMarca'>{producto.marca}</h3>
             {
                 producto.descuento > 0 && <h4 className='tarjetaProductoDetalleSinDescuento'>{producto.precioSinDescuento}</h4>
             }
             {
                 producto.descuento > 0 && <TarjetaProductoDetalleDescuento producto={producto}/>
             }
-            <h2>${producto.precio}</h2>
+            <h2 className='tarjetaProductoDetallePrecio'>${producto.precio}</h2>
             <h4 className='tarjetaProductoDetalleInfoIva'>*Todos los precios incluyen IVA, excepto la provincia de Tierra Del Fuego</h4>
             
             {
@@ -72,9 +72,9 @@ const TarjetaProductoDetalle = ({productos}) => {
     </div>
 
     <div className="tarjetaProductoDetalleDescripcion">
-                <h2>Descripción:</h2>
+                <h2>Descripción</h2>
                 <h3>{producto.descripcion}</h3>
-            </div>
+    </div>
 
             <MainContainerProductosOfertas productos={productos}/>
     </>

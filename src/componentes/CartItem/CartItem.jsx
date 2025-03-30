@@ -9,10 +9,9 @@ const CartItem = ({item, cantidad}) => {
   return (
     <div className='cartItemContainer'>
         <h2 className='cartItemNombre'>{item.nombre}</h2>
-        <h2 className='cartItemCantidad'>{cantidad}</h2>
-        <h2 className='cartItemPrecio'> Precio: {item.precio}</h2>
+        <h2 className='cartItemCantidad'>x{cantidad}</h2>
+        <h2 className='cartItemPrecio'> $ {item.precio}</h2>
         <button className='cartItemBtnEliminarProducto' onClick={() => eliminarProducto(item.id)}> Eliminar producto </button>
-        
     </div>
   )
 }

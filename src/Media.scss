@@ -567,6 +567,16 @@ margin-bottom: 1vh !important;
     }
 }
 
+.tarjetaProducto2AgregadoContainer{
+    top: 5vh !important;
+    width: 20vw !important;
+    height: 6vh !important;
+
+        p{
+            font-size: 0.8vh !important;
+        }
+}
+
 .tarjeta2PrecioSinDescuento{
     left: 32vw  !important;
     top: 7.5vh !important;
@@ -602,6 +612,112 @@ margin-bottom: 1vh !important;
     right: 2vw !important;
     height: 3vh !important;
     width: 20vw !important;
+}
+
+
+// PRODUCTO DETALLE
+
+.tarjetaProductoDetalleImgContainer{
+    height: 30vh !important;
+    margin-right: 0vw !important;
+    img{
+        margin-top: 2.5vh;
+        height: 25vh !important;
+    }
+}
+
+.tarjetaProductoDetalleInfo{
+    margin-top: 1vh !important;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height: 28vh !important;
+    width: 40vw !important;
+
+    .tarjetaProductoDetalleNombre{
+        font-size: 2vh;
+        height: 6.5vh;
+        overflow: none;
+    }
+    .tarjetaProductoDetalleMarca{
+        font-size: 2vh !important;
+    }
+    .tarjetaProductoDetallePrecio{
+        font-size: 2vh;
+    }
+}
+
+.tarjetaProductoDetalleContadorCarritoContainer{
+    margin-top: 2vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+
+        .tarjetaProductoDetalleContador{
+            width: 20vw;
+            height: 3vh;
+            margin-bottom: 0.5vh;
+                h3{
+                    font-size: 2vh;
+                }
+        }
+
+        .tarjetaProductoDetalleAgregarAlCarrito{
+            height: 3vh;
+            width: 20vw;
+        }
+}
+
+.tarjetaProductoDetalleSinDescuento{
+    top: 13.5vh !important;
+    left: 61vw;
+    font-size: 1vh !important ;
+}
+
+.tarjetaProductoDetalleDescuentoContainer{
+    top: 14.3vh !important;
+    left: 67vw;
+    width: 10vw !important;
+        img{
+            height: 1.5vh !important;
+            top: -0.1vh !important;
+            left: 0vw !important;
+        }
+
+        h3{
+            left: 1.9vw !important;
+            top: -0.4vh !important;
+            font-size: 1.3vh !important;
+        }
+}
+
+.productoDetalleAgregadoHeaderContainer{
+    right: -3vw !important;
+    height: 2vh !important;
+    top: -4.53vh !important;
+    width: 99.9vw !important;
+        img{
+            margin-top: 0.5vh !important;
+            margin-right: 0.5vw !important;
+            height: 1.3vh !important;
+        }
+        p{
+            font-size: 0.8vh !important;
+        }
+}
+
+.productoDetalleAgregadoContainer{
+    margin-left: 7.5vw;
+    height: 5vh !important;
+        p{
+            font-size: 1vh !important;
+        }
+}
+.tarjetaProductoDetalleDescripcion{
+    h2{
+        font-size: 2vh;
+    }
 }
 //footer
 

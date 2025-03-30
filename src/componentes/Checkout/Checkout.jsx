@@ -5,6 +5,7 @@ import { CarritoContext } from '../../context/CarritoContext'
 import { collection, addDoc} from "firebase/firestore"
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
+import './Checkout.scss'
 
 const Checkout = () => {
     
@@ -17,6 +18,8 @@ const Checkout = () => {
     const [orderId, setOrderId] = useState("")
     const [error, setError] = useState("")
     const [compraAprobada, setCompraAprobada] = useState(false)
+
+    
 
     const navigate = useNavigate()
         useEffect(() => {
@@ -74,55 +77,62 @@ const Checkout = () => {
         }
   return (
     <>
-        <h2>Checkout</h2>
+        <h2 className='checkoutTitulo'>Checkout</h2>
 
-        <form onSubmit={manejadorFormulario}>
+        <form className='checkoutForm' onSubmit={manejadorFormulario}>
+            <div className='checkoutControlCard'>
             {
                 carrito.map(producto => (
-                    <div key={producto.item.id}>
-                        <p> {producto.item.nombre} x {producto.cantidad}</p>
-                        <p> Precio: ${producto.item.precio}</p>
+                    <div className='checkoutControlDiv' key={producto.item.id}>
+                        <p className='checkoutControlProducto'> {producto.item.nombre} x {producto.cantidad}</p>
                     </div>
                 ))
             }
+            </div>
 
-            <div>
+            <h3 className='checkoutTotal'> Total: ${total} </h3>
+
+
+            <div className='checkoutFormInputsDiv'>
+            <div className='checkoutFormInputDiv'>
                 <label htmlFor=""> Nombre: </label>
                 <input type="text" onChange={(e) => setNombre(e.target.value)} />
             </div>
 
-            <div>
+            <div  className='checkoutFormInputDiv'>
                 <label htmlFor=""> Apellido: </label>
                 <input type="text" onChange={(e) => setApellido(e.target.value)} />
             </div>
 
-            <div>
+            <div  className='checkoutFormInputDiv'> 
                 <label htmlFor=""> Telefono:  </label>
                 <input type="text" onChange={(e) => setTelefono(e.target.value)} />
             </div>
 
-            <div>
+            <div  className='checkoutFormInputDiv'>
                 <label htmlFor="" > Email: </label>
                 <input type="text" onChange={(e) => setEmail(e.target.value)} />
             </div>
 
-            <div>
+            <div  className='checkoutFormInputDiv'>
                 <label htmlFor=""> Confirmar email: </label>
                 <input type="text" onChange={(e) => setEmailConfirmacion(e.target.value)} />
             </div>
-
+            </div>
             {
-                error && <p> {error} </p>
+                error && <div className='checkoutFormError'> 
+                    <h3>{error}</h3> 
+                    </div>
             }
 
             {
                 orderId && (
-                    <div>
+                    <div className='checkoutGracias'>
                         <p>gracias por su compra. Tu numero de orden es: {orderId}</p>
                     </div>
                 )
             }
-            <button type="submit"> Finalizar orden</button>
+            <button className='checkoutFormSubmit' type="submit"> Finalizar orden</button>
         </form>
     </>
   )

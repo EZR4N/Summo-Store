@@ -1,0 +1,61 @@
+
+.carritoTitulo{
+    margin-top: 2vh;
+}
+
+.carritoCard{
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.1vw solid #c9c5c5; 
+    border-radius: 3vw;
+    padding: 2vw;
+}
+
+.carritoCardButtons{
+    display: flex;
+    justify-content: space-around;
+        .carritoFinalizarBtn{
+            width: 10vw;
+            height: 10vh;
+            background-color: #009BE7;
+            color: white;
+            font-weight: 500;
+            border: 0.1vw solid white;
+            border-radius: 2vw;
+            margin-right: 1vw;
+            transition: background 0.2s ease;
+            transition: transform 0.2s ease-in-out;
+
+            &:hover{
+                background-color: #1687c0;
+                transform: scale(1.03);
+            }
+        }
+
+        .carritoVaciarBtn{
+            width: 10vw;
+            margin-left: 1vw;
+            background-color: #dc3545;
+            font-weight: 500;
+            color: white;
+            border: 0.1vw solid white;
+            border-radius: 2vw;
+            transition: background 0.3s ease;
+            transition: transform 0.2s ease-in-out ;
+            &:hover{
+                background-color: #c82333;
+                transform: scale(1.03);
+            }
+        }
+}
+
+.carritoVacio{
+    margin-top: 20vh;
+}
+
+.carritoVacioImg{
+    height: 30vh;
+}

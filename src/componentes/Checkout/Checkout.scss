@@ -1,0 +1,80 @@
+.checkoutTitulo{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.checkoutControlCard{
+    border: 0.1vw solid #F88A1B;
+    border-radius: 2vw;
+    padding: 1vh;
+    margin-bottom: 2vh;
+
+        .checkoutControlDiv{
+            margin-top: 2vh;
+            margin-left: 1vw;
+            .checkoutControlProducto{
+                font-weight: 300;
+            }
+        }
+}
+
+.checkoutTotal{
+    font-size: 2vw;
+    margin-bottom: 2vh;
+    margin-left: 1vw;
+    font-weight: 200;
+}
+
+.checkoutForm{
+    width: 50vw;
+}
+
+.checkoutFormInputsDiv{
+    border: 0.1vw solid #F88A1B;
+    border-radius: 2vw;
+    padding: 2vh;
+}
+
+.checkoutFormInputDiv{
+    display: flex;
+    flex-direction: column;
+        label{
+            font-weight: 600;
+        }
+
+        input{
+            border: 0.1vw solid #6c7d92;
+            border-radius: 1vw;
+        }
+}
+
+.checkoutFormError{
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    background-color: #fa7784;
+    border: 0.2vw solid #740813;
+    border-radius: 1vw;
+    h3{
+        margin-top: 1vh;
+        margin-left: 1vw;
+    color: #c9071b80;
+    }
+}
+
+.checkoutFormSubmit{
+    width: 30vw;
+    margin-left: 10vw;
+    margin-top: 2vh;
+    height: 10vh;
+    background-color: #28a745;
+    border: 0.1vw solid #67dd83;
+    border-radius: 2vw;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.2s ease-in-out;
+    transition: background 0.2s ease-out;
+    &:hover{
+        transform: scale(1.02);
+        background-color: #059128;
+    }
+}

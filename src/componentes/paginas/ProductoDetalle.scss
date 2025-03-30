@@ -15,8 +15,19 @@
 
 .tarjetaProductoDetalleInfo{
     margin-top: 5vw;
-    width: 25vw;
+    width: 26vw;
+    padding-left: 1vw;
+    box-shadow: 0.5vw 0.3vw #CACACA;
+    border: 0.1vw solid #DDDDDD;
+    height: 50vh;
+    border-radius: 2vh;
+    .tarjetaProductoDetalleNombre{
+        margin-top: 1.5vh;
+    }
 
+    .tarjetaProductoDetalleMarca{
+        font-size: 2vw;
+    }
     .tarjetaProductoDetalleInfoIva{
         margin-top: 2vw;
         font-size: 1.2vw;
@@ -56,8 +67,19 @@
 
 .tarjetaProductoDetalleDescripcion{
         width: 85vw;
-    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    h2{
+        justify-content: center;
+        padding-left: 15vw;
+        padding-right: 15vw;
+        padding-bottom: 1.5vh;
+        border-bottom: 0.3vw solid #009BE7;
+    }
+
     h3{
+        margin-top: 1vh;
         font-size: 2vw;
     }
 }
