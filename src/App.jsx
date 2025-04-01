@@ -32,11 +32,16 @@ import Cart from './componentes/Cart/Cart';
 import Checkout from './componentes/Checkout/Checkout';
 import TodosLosProductos from './componentes/paginas/TodosLosProductos'
 import BusquedaProductos from "./componentes/paginas/BusquedaProductos";
+import { useEffect } from "react";
 
 function App() {
+  // useEffect(() => {
+    
+  //   document.title = 'Summo Store'
+  // }, [])
+
   return (
     <>
-
     
 
     <BrowserRouter>

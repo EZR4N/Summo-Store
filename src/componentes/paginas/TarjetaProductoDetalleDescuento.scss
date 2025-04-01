@@ -1,35 +1,37 @@
 .tarjetaProductoDetalleDescuentoContainer{
     background-color: #F88A1B;
     border: 1vw solid #F88A1B;
-    height: 2vh;
-    width: 4vw;
+    height: 5.6vh;
+    width: 5vw;
     border-radius: 2vw;
-    position: absolute;
+    
     top: 35vh;
     right: 12vw;
     display: flex;
+    align-items: center;
         img{
-            position: absolute;
-            top: -0.8vh;
-            left: -0.7vw;
-            height: 2vh;
+            
+            height: 1.5vh;
         }
 
         h3{
-            position: absolute;
-            top: -1vh;
-            left: -0.5vw;
+            margin-top: 0.4vh;
             font-size: 1vw;
             color: white;
-            margin-left: 1vw;
+            margin-right: 1vw;
+            
         }
 }
 
 .tarjetaProductoDetalleSinDescuento{
-    position: absolute;
+    
     font-size: 80%;
     color: #6b6a6a !important;
     text-decoration: line-through;
     right: 16vw;
     top: 33vh;
+}
+
+.tarjetaProductoDetallePrecioDiv{
+    display: flex;
 }
