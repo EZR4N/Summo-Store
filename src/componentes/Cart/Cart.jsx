@@ -10,8 +10,7 @@ const Cart = () => {
     if (cantidadTotal === 0){
         return(
             <>
-            <h2 className='carritoVacio'>Tu carrito esta vacío</h2>
-            <img className='carritoVacioImg' src="/assets/imagenes/grumpy.webp" alt="grumpy" />
+            <img className='carritoVacio' src="/assets/imagenes/carritovacio.png" alt="carritovacio" />
             </>
         )
     }
