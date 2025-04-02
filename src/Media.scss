@@ -136,7 +136,7 @@ header{
                 width: 4vw;
                 display: flex;
                 li{
-                margin-top: 0.2vh;
+                
                 font-size: 1.6vh;
                 text-align: center;
                 position: absolute;
@@ -725,7 +725,11 @@ margin-bottom: 1vh !important;
     }
 
     .cartItemCantidad{
-        font-size: 1.5vh !important;
+        font-size: 1.3vh !important;
+    }
+
+    .cartItemPrecio{
+        font-size: 1.4vh !important;
     }
 
     .cartItemBtnEliminarProducto{
@@ -829,6 +833,67 @@ margin-bottom: 1vh !important;
     }
 
 }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape){
+    header{
+        height: 70vh !important;
+        
+        .headerLogo{
+            margin-top: 0vh !important;
+            height: 25vh;
+            width: 25vw !important;
+        }
+
+        .headerNav1{
+            height: 20vh !important;
+        }
+        .headerDivCarrito{
+            width: 12vw !important;
+            margin-top: 17vh;
+            height: 12vh !important;
+                a{  
+                    height: 20vh !important;
+                    width: 40vw !important;
+                    img{
+                        position: absolute;
+                        left: -2vw;
+                        top: 2vh;
+                        height: 7vh;
+                    }
+                }
+                ul{
+                    a{
+                        height: 2.5vw !important;
+                        width: 2.5vw !important;
+                        right: -1vw !important;
+                        top: -4vh !important;
+                            li{
+                                top: -1vh !important;
+                                right: -3.8vw !important;
+                                font-size: 2vw ;
+                            }
+                    }
+                }
+        }
+    }    
+
+    .menu-button{
+        height: 13vh;
+        margin-top: 17vh !important;
+        h2{
+            top: 2vh;
+            left: 4vw;
+        }
+    }
+
+    .menu{
+        top: 44vh !important;
+    }
+
+    .headerDivInput{
+        top: 38vh;
+    }
 }
 
 @media screen and (max-width: 480px) {
