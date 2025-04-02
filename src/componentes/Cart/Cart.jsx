@@ -9,13 +9,13 @@ const Cart = () => {
     const {carrito, vaciarCarrito, total, cantidadTotal} = useContext(CarritoContext)
     if (cantidadTotal === 0){
         return(
-            <>
+            <div className='carritoContainer'>
             <img className='carritoVacio' src="/assets/imagenes/carritovacio.png" alt="carritovacio" />
-            </>
+            </div>
         )
     }
   return (
-    <>
+    <div className='carritoContainer'>
       <h2 className='carritoTitulo'> Tu carrito</h2>
         {
           carrito.map((producto) => <CartItem key={producto.item.id} {...producto}/>)
@@ -33,7 +33,7 @@ const Cart = () => {
 <button className='carritoVaciarBtn' onClick={vaciarCarrito}>Vaciar carrito</button>
 </div>
 </div>
-    </>
+    </div>
   )
 }
 

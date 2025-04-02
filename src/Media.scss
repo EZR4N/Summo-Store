@@ -586,9 +586,7 @@ margin-bottom: 1vh !important;
     margin-top: 2.5vh !important;
     height: 5vh !important;
     width: 20vw !important;
-        h3{
-            position: absolute;
-        }
+    align-items: center;
 
         img{
             height: 2vh !important;
@@ -627,10 +625,10 @@ margin-bottom: 1vh !important;
 }
 
 .tarjetaProductoDetalleInfo{
-    margin-top: 1vh !important;
+    margin-top: 0vh !important;
     margin-left: 5vw;
     margin-right: 5vw;
-    height: 28vh !important;
+    height: 30vh !important;
     width: 40vw !important;
 
     .tarjetaProductoDetalleNombre{
@@ -659,6 +657,7 @@ margin-bottom: 1vh !important;
             height: 3vh;
             margin-bottom: 0.5vh;
                 h3{
+                    margin-top: 0vh;
                     font-size: 2vh;
                 }
         }
@@ -717,6 +716,49 @@ margin-bottom: 1vh !important;
         font-size: 2vh;
     }
 }
+
+// CART
+.cartItemContainer{
+    width: 90vw !important;
+    .cartItemNombre{
+        font-size: 1.7vh;
+    }
+
+    .cartItemCantidad{
+        font-size: 1.5vh !important;
+    }
+
+    .cartItemBtnEliminarProducto{
+        font-size: 1.4vh !important;
+    }
+}
+
+.carritoCardButtons{
+    button{
+        width: 25vw !important;
+        height: 8vh !important;
+    }
+}
+
+.carritoContainer{
+    min-height: 65vh;
+}
+
+//CHECKOUT
+
+.checkoutTotal{
+    font-size: 3vh !important;
+}
+
+.checkoutForm{
+    width: 90vw !important;
+}
+
+.checkoutFormSubmit{
+    width: 70vw !important;
+    margin-bottom: 2vh;
+}
+
 //footer
 
 .footerContainer{

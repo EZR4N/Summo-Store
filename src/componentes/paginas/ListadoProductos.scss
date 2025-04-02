@@ -42,3 +42,31 @@ listadoProductosFiltrosForm{
 .productoBusquedaSpinner{
     margin-top: 20vh;
 }
+
+.listadoProductosFiltros{
+
+    .listadoProductosFiltrosDescuento{
+        input{
+            accent-color: #F88A1B !important;
+        }
+    }
+
+    .listadoProductosFiltrosLanzamiento{
+        input{
+            accent-color: #F88A1B !important;
+        }
+    }
+
+    .listadoProductosFiltrosOrden{
+        select{
+            color: white;
+            background-color: #F88A1B;
+            border: 0.1vw solid #F88A1B;
+            border-radius: 5vw !important;
+            option{
+                background-color: #ff860e;
+                
+            }
+        }
+        }
+}

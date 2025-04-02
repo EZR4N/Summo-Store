@@ -13,10 +13,10 @@ const MainContainerProductosLanzamientos = () => {
   const { productos, loading } = useContext(ProductosContext)
   let productosFiltrados = productos.filter(producto => producto.lanzamiento===true)
   const [cantidadCards, setCantidadCards] = useState(4.15)
-  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 768px)").matches);
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 1024px)").matches);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
     setIsMobile(mediaQuery.matches);
 
     const handleResize = () => setIsMobile(mediaQuery.matches);

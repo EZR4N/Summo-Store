@@ -95,28 +95,28 @@ const Checkout = () => {
 
             <div className='checkoutFormInputsDiv'>
             <div className='checkoutFormInputDiv'>
-                <label htmlFor=""> Nombre: </label>
-                <input type="text" onChange={(e) => setNombre(e.target.value)} />
+                <label htmlFor="nombre"> Nombre: </label>
+                <input id='nombre' type="text" onChange={(e) => setNombre(e.target.value)} />
             </div>
 
             <div  className='checkoutFormInputDiv'>
-                <label htmlFor=""> Apellido: </label>
-                <input type="text" onChange={(e) => setApellido(e.target.value)} />
+                <label htmlFor="apellido"> Apellido: </label>
+                <input id='apellido' type="text" onChange={(e) => setApellido(e.target.value)} />
             </div>
 
             <div  className='checkoutFormInputDiv'> 
-                <label htmlFor=""> Telefono:  </label>
-                <input type="text" onChange={(e) => setTelefono(e.target.value)} />
+                <label htmlFor="telefono"> Telefono:  </label>
+                <input id='telefono' type="text" onChange={(e) => setTelefono(e.target.value)} />
             </div>
 
             <div  className='checkoutFormInputDiv'>
-                <label htmlFor="" > Email: </label>
-                <input type="text" onChange={(e) => setEmail(e.target.value)} />
+                <label htmlFor="email" > Email: </label>
+                <input id='email' type="text" onChange={(e) => setEmail(e.target.value)} />
             </div>
 
             <div  className='checkoutFormInputDiv'>
-                <label htmlFor=""> Confirmar email: </label>
-                <input type="text" onChange={(e) => setEmailConfirmacion(e.target.value)} />
+                <label htmlFor="confirmarEmail"> Confirmar email: </label>
+                <input id='confirmarEmail' type="text" onChange={(e) => setEmailConfirmacion(e.target.value)} />
             </div>
             </div>
             {

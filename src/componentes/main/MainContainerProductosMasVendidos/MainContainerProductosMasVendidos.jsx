@@ -10,10 +10,10 @@ import MoonLoader from 'react-spinners/MoonLoader';
 const MainContainerProductosMasVendidos = () => {
     const { productos, loading} = useContext(ProductosContext)
     const [cantidadCards, setCantidadCards] = useState(4.15)
-      const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 768px)").matches);
+      const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 1024px)").matches);
     
       useEffect(() => {
-        const mediaQuery = window.matchMedia("(max-width: 768px)");
+        const mediaQuery = window.matchMedia("(max-width: 1024px)");
         setIsMobile(mediaQuery.matches);
     
         const handleResize = () => setIsMobile(mediaQuery.matches);
