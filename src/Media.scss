@@ -1065,6 +1065,77 @@ margin-bottom: 1vh !important;
             height: 4.5vh !important;
         }
     }
+
+    .listadoProductosFiltros{
+        top: 108vh !important;
+    }
+
+    .listadoProductosEncontrados{
+        font-size: 5vh !important;
+        margin-bottom: 13vh !important;
+    }
+
+    .listadoProductosTarjetaContainer{
+        height: 40vh !important;
+    .listadoProductosTarjetaImgContainer{
+        img{
+        height:35vh !important;
+        }
+    }
+    .listadoProductosTarjetaInfo{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        .listadoProductosTarjetaNombre{
+        font-size: 3vh !important;
+        }
+    
+
+    .listadoProductosTarjetaMarca{
+    font-size: 3vh !important;
+    }   
+
+    .listadoProductosTarjetaPrecio{
+        font-size: 3vh !important;
+    }
+
+    .tarjetaProducto2DescuentoContainer{
+        top: 23.8vh !important;
+        left: 35vw !important;
+        width: 6vw !important;
+        img{
+            height: 2vh !important;
+            top: -1vh !important;
+            left: 0.3vw !important;
+        }
+
+        h3{
+            left: 1vw !important;
+            top: -1.6vh !important;
+            font-size: 2vh !important;
+        }
+    }
+    }
+    }
+
+    .tarjeta2PrecioSinDescuento{
+        top: 23.3vh !important;
+        left: 31vw !important;
+    }
+
+    .listadoProductosTarjetaSumarRestar{
+        margin-top: 5vh !important;
+        height: 10vh !important;
+        img{
+            top: 1.4vh !important;
+            height: 5vh !important;
+        }
+    }
+
+    .listadoProductosTarjetaAgregarAlCarrito{
+        top: 21vh !important;
+        height: 9vh !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
