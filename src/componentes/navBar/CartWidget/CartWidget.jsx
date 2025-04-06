@@ -17,9 +17,11 @@ const CartWidget = () => {
         </NavLink>
         <NavLink to="/carrito">
         <li>
+          <p>
           {
           cantidadTotal
-          } productos</li>
+          } productos
+            </p></li>
         </NavLink>
       </ul>
       <Link className='addCartWidget' to="/carrito">

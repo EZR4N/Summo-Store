@@ -126,24 +126,27 @@ header{
             a{  
                 margin-top: 0vh;
                 position: absolute;
-                height: 2vh !important;
+                height: 2.1vh !important;
                 overflow: hidden;
-                top: -0.6vh;
+                top: -0.8vh;
                 right: 0.1vw;
                 background-color: #009BE7;
                 border: 0.1vh solid #009BE7;
                 border-radius: 2vh !important;
                 width: 4vw;
                 display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
                 li{
-                
+                height: 5vh !important;
                 font-size: 1.6vh;
                 text-align: center;
-                position: absolute;
-                right: -5.5vw ;
-                top: -0.6vh;
+                margin-top: 0vw !important;
                 color: white;
-                }
+                p{
+                    margin-bottom: 20vh !important;
+                }}
             }
         }
 }
@@ -1068,6 +1071,27 @@ margin-bottom: 1vh !important;
 
     .listadoProductosFiltros{
         top: 108vh !important;
+
+        .listadoProductosFiltrosForm{
+            margin-top: 2vh ;
+
+            .listadoProductosFiltrosLanzamiento{
+                top: 6vh !important;
+            }
+            div{
+                label{
+                    font-size: 2.4vh !important;
+                }
+                p{
+                    font-size: 2vh !important;
+                }
+                select{
+                    height: 4vh !important;
+                    top: 3vh !important;
+                    width: 25vw !important;
+                }
+            }
+        }
     }
 
     .listadoProductosEncontrados{
@@ -1136,6 +1160,109 @@ margin-bottom: 1vh !important;
         top: 21vh !important;
         height: 9vh !important;
     }
+
+    .tarjetaProducto2AgregadoContainer{
+        height: 10vh !important;
+        top: 10vh !important;
+        p{
+            font-size: 3vh !important;
+        }
+    }
+
+
+    // PRODUCTO DETALLE
+
+    .tarjetaProductoDetalleImgContainer{
+        height: 90vh !important;
+        width: 55vw;
+        margin-left: 2vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+            img{
+                height: 80vh !important;
+            }
+    }
+.tarjetaProductoDetalleInfo{
+    margin-left: 2vw !important;
+    width: 30vw !important;
+    height: 60vh !important;
+    margin-top: 10vh !important;
+
+    .tarjetaProductoDetalleNombre{
+        font-size: 4vh !important;
+        margin-bottom: 3.5vh !important;
+    }
+    .tarjetaProductoDetalleMarca{
+        font-size: 4vh !important;
+        
+    }
+
+    .tarjetaProductoDetallePrecio{
+        font-size: 4vh !important;
+    }
+
+
+}
+    .tarjetaProductoDetalleSinDescuento{
+        font-size: 2vh !important;
+    }
+
+    .tarjetaProductoDetalleDescuentoContainer{
+        margin-top: 1vh;
+        width: 5vw !important;
+            h3{
+                position: absolute !important;
+                font-size: 2vh !important;
+                top: 19vh !important;
+                left: 13.5vw !important;
+            }
+    }
+
+    .tarjetaProductoDetalleContadorCarritoContainer{
+        margin-top: 6vh !important;
+        
+        .tarjetaProductoDetalleContador{
+            width: 15vw !important;
+            height: 8vh !important;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            h3{
+                font-size: 3vh !important;
+                margin-top: 1vh !important;
+            }
+
+        }
+
+        .tarjetaProductoDetalleAgregarAlCarrito{
+            height: 8vh !important;
+            width: 17vw !important;
+        }
+    }
+
+    .productoDetalleAgregadoContainer{
+        margin-left: 2vw !important;
+        margin-top: 8vh !important;
+        height: 10vh !important;
+            p{
+                font-size: 3vh !important;
+                margin-top: 5vh !important;
+            }
+    }
+
+    // CART
+
+    .cartItemContainer{
+    .cartItemNombre, .cartItemCantidad, .cartItemPrecio, .cartItemBtnEliminarProducto{
+        font-size: 3vh !important;
+    }
+    }
+
+    // CHECKOUT
+    .checkoutTotal{
+        font-size: 5vh  !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1190,4 +1317,8 @@ margin-bottom: 1vh !important;
 .noScroll{
     overflow: hidden;
     height: 100vh;
+}
+
+main{
+    min-height: 80vh !important;
 }
