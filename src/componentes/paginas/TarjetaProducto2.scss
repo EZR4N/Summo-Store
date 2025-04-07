@@ -35,7 +35,8 @@
     .listadoProductosTarjetaNombre{
     width: 30vw;
     overflow: hidden;
-    height: 4.3vh;
+    height: 3.6vh;
+    margin-bottom: 0.7vh;
     }
     
     h4{
@@ -46,6 +47,8 @@
 
 .listadoProductosPrecio{
     display: flex;
+    position: relative;
+    margin-top: 2vh;
 }
 .listadoProductosTarjetaSumarRestar{
     display: flex;
