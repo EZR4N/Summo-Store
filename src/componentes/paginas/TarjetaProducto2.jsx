@@ -43,6 +43,8 @@ const TarjetaProducto2 = ({producto}) => {
               </Link>
               <Link to={`/item/${producto.id}`}>
               
+              <div className='listadoProductosPrecio'>
+              <h3 className='listadoProductosTarjetaPrecio'>{"$"+producto.precio}</h3>
               {
                 producto.descuento > 0 && <h4 className='tarjeta2PrecioSinDescuento'>{producto.precioSinDescuento}</h4>
               }
@@ -50,8 +52,9 @@ const TarjetaProducto2 = ({producto}) => {
               {
                 producto.descuento > 0 && <TarjetaProducto2Descuento producto={producto}/>
               }
-              <h3 className='listadoProductosTarjetaPrecio'>{"$"+producto.precio}</h3>
+              </div>
               </Link>
+
               </div>
               {
                 agregado?(

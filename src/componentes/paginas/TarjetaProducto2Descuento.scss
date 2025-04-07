@@ -4,9 +4,10 @@
     height: 2vh;
     width: 4vw;
     border-radius: 2vw;
-    position: absolute;
-    top: 13.5vh;
-    left: 23.5vw;
+    margin-top: 0.5vh;
+    position: relative;
+    margin-left: 2vw ;
+    
     display: flex;
         img{
             position: absolute;
@@ -30,6 +31,6 @@
     font-size: 70%;
     color: #6b6a6a !important;
     text-decoration: line-through;
-    left: 18vw;
+    left: 16vw;
     top: 12vh;
 }
