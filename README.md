@@ -21,7 +21,8 @@ Para desarrollarlo usé **React**, **Firebase** y **Sass**. Este ecommerce se ba
 - ✅ **Checkout con validación de formularios**
 - 📤 **Órdenes almacenadas** en Firebase
 - 🔄 **Estado global** con Context API
-- ⚡ **Rendimiento optimizado** con Vite
+- ⚡ **Rendimiento optimizado** con Vite  
+- ![Summo gif](./public/assets/gif-summo-store.gif)
 ---
 
 ## 🛠️ Tech Stack
